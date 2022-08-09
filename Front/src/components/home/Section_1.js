@@ -105,6 +105,7 @@ const Section_1 = ()=> {
                                       
                                  </Grid>
                                  <Grid item sm={6} xs={6}>
+                                   {/* 
                                    <Link to={{
                                         pathname: "/",
                                         hash: "#service",
@@ -132,7 +133,9 @@ const Section_1 = ()=> {
                                       >
                                            En savoir plus
                                       </Button>
+                                      
                                    </Link>
+                                   */}
                                  </Grid>
                             </Grid>  
                        </Grid>

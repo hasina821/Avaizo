@@ -6,11 +6,18 @@ import Color from "../../Back_office/components/palette/color";
 
 const StyledBox = styled(Box)({
     backgroundColor:Color.paletteBluedark,
-    borderRadius:'50px 50px',
+    borderRadius :'50px 15px',
     color:'#fff',
     width:'100%',
     textAlign:'center',
     fontStyle:'italic'
+})
+
+const StyledCard = styled(Box)({
+    textAlign:'center',
+    backgroundColor:Color.paletteTeal4,
+    borderRadius :'50px 15px',
+
 })
 
 const StyledPara=styled(Typography)({
@@ -52,7 +59,7 @@ const Section_9 = ()=>{
             <StyledBox>
                 <Slider {...settings}>
                 {Opinion.map(op=>(
-                    <Box>
+                    <StyledCard>
                         <StyledPara>
                             {op.descri}
                         </StyledPara>
@@ -77,7 +84,7 @@ const Section_9 = ()=>{
                             </Stack>
                             </Grid>
                         </Grid>
-                    </Box>
+                    </StyledCard>
                 ))}
                 </Slider>
             </StyledBox>

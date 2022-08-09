@@ -40,7 +40,7 @@ const Section_3 = ()=> {
                                         }}/>
                                    </Grid>
                                    <Grid item sm={8} xs={10} >
-                                        <Typography variant="h1" textTransform='uppercase' fontWeight='bolder' color='#fff'>
+                                        <Typography variant="h1" textTransform='uppercase' fontWeight='bolder' color={Color.paleteTealRadiant}>
                                              NOS SERVICES
                                         </Typography>
                                    </Grid>
