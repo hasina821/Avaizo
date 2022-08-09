@@ -9,12 +9,13 @@ const AuthLayout = () => {
     return (
         <Grid container width="100vw" height="100vh" alignItems="center" justifyContent="center" sx={{ backgroundColor: Color.paletteBluedark }}>
             <Box width="40vw" sx={{ position: 'relative', padding: '40px',backgroundColor: '#fff',borderRadius:'5px'}}>
-                <Grid container direction="row" alignItems="center">
-                    <img item src="/crew.png" alt="logo" style={{ width: '80px', height: '70px', objectFit: 'cover' }} />
-                    <Grid item direction="row">
+                <Grid container direction="row" alignItems="center" justifyContent="center">
+                    <img item="true" src="/crew.png" alt="logo" style={{ width: '80px', height: '70px', objectFit: 'cover' }} />
+                    <Grid item>
                         <Grid container>
-                            <Typography item variant="h4">&nbsp;RUMBLE&nbsp;</Typography>
-                            <Typography item variant="h4">CREW</Typography>
+                            <Typography item="true" variant="h4" fontWeight="bold" color={Color.paletteBluedark}>&nbsp;RUM</Typography>
+                            <Typography item="true" variant="h4" fontWeight="bold" color={Color.paletteOrange}>BLE&nbsp;</Typography>
+                            <Typography item="true" variant="h4" fontWeight="bold" color={Color.paletteBluedark}>CREW</Typography>
                         </Grid>
                     </Grid>
                 </Grid>
