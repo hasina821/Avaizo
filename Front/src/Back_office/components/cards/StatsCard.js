@@ -8,19 +8,19 @@ const stats = [
     {
       title: "Total Revenue",
       percentage: "+32.40%",
-      value: "$10,243.00",
+      value: "Ar10,243.00",
       status: "up",
       icon: <Coin/>,
     },
     {
-      title: "Total Dish Ordered",
-      percentage: "-12.40%",
+      title: "Total de difussion",
+      percentage: "12.40%",
       value: "23,456",
       status: "down",
       icon: <Order/>,
     },
     {
-      title: "Total Customer",
+      title: "Total de clients",
       percentage: "+2.40%",
       value: "1,234",
       status: "up",

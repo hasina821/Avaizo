@@ -10,7 +10,7 @@ import AddIcon from '../icons/AddIcon';
 
 
 const menus = [
-    { name: " ", icon: <Home/> },
+    { name: "home", icon: <Home/> },
     { name: "graph", icon: <Graph/> },
     { name: "add", icon: <AddIcon/> },
     { name: "settings", icon: <Settings/> },
@@ -22,7 +22,7 @@ const menus = [
 
 
 const Sidebar = ()=>{
-    const [activemenu,setActive]=useState("Dashboard")
+    const [activemenu,setActive]=useState("home")
 
     return(
         <>

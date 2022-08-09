@@ -5,6 +5,7 @@ import Home from "./Home"
 import Add from "./Ajouter"
 import Graph from "./Graph"
 import Settings from "./Settings"
+import {Link} from "react-router-dom"
 
 const AdminLayout = () =>{
     return(
@@ -12,7 +13,7 @@ const AdminLayout = () =>{
             <div class="flex w-full min-h-screen font-sans bg-gray-800">
                 <Sidebar />
                 <Routes>
-                    <Route path='/' element={<Home/>}/>
+                    <Route path='/home' element={<Home/>}/>
                     <Route path='/add' element={<Add/>}/>
                     <Route path='/graph' element={<Graph/>}/>
                     <Route path='/Settings' element={<Settings/>}/>

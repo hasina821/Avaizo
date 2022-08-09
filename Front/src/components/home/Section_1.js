@@ -58,7 +58,7 @@ const Section_1 = ()=> {
                                       }}/>
                                  </Grid>
                                  <Grid item sm={9} xs={9} marginLeft={3}>
-                                   <Link to={`/admin/`}>
+                                   <Link to={`/admin/home`}>
                                       <Typography className="text-yellow-500" variant="p">
                                             Admin
                                         </Typography>
