@@ -2,10 +2,11 @@ import React from "react"
 import {Box,Grid,Typography,Divider} from "@mui/material"
 import {styled} from "@mui/styles"
 import Section_9 from "./Section_9"
+import Color from "../../Back_office/components/palette/color"
 
 
 const StyledBox=styled(Box)({
-    backgroundColor:'#000',
+    backgroundColor:Color.paletteBluedark,
     color:'#fff',
     padding:'200px 20px 200px 20px',
     height:'80vh',

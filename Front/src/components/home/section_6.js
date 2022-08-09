@@ -1,6 +1,7 @@
 import React from "react"
-import { Grid,Box, Typography } from "@mui/material"
+import { Grid,Box, Typography,Card } from "@mui/material"
 import { makeStyles, styled } from "@mui/styles"
+import Color from "../../Back_office/components/palette/color";
 
 const useStyles = makeStyles((theme)=>({
     box2: {
@@ -9,8 +10,16 @@ const useStyles = makeStyles((theme)=>({
 }));
 
 const StyledBox = styled(Box)({
-    backgroundColor:'#000',
+    backgroundColor:Color.paletteBluedark,
     height:'100vh'
+})
+
+const StyledCard = styled(Box )({
+    textAlign:'center',
+    backgroundColor:Color.paletteTeal4,
+    margin:'2% 4%',
+    borderRadius :'4%',
+    boxShadow:'4px 4px 4px #10857C'
 })
 
 const Section_6 = () =>{
@@ -32,45 +41,53 @@ const Section_6 = () =>{
                 </Grid>
             </Grid>
             <Box className={styles.box2}>
-                <Grid container spacing={2}>
+                <Grid container spacing={2} >
                     <Grid xs={2} lg={2} item>
 
                     </Grid>
                     <Grid xs={2} lg={2}>
-                        <Typography variant='h5' color='#fff' fontWeight='bolder'>
-                            Etape 1
-                        </Typography>
-                        <Typography color='#fff'>
-                            Lorem ipsum dolor sit amet consectetur adipiscing elit.
-                            Consectetur tortor nunc aliquam consectetur semper augue at.
-                        </Typography>
+                        <StyledCard>
+                            <Typography variant='h5' color='#fff' fontWeight='bolder'>
+                                Etape 1
+                            </Typography>
+                            <Typography color='#fff'>
+                                Lorem ipsum dolor sit amet consectetur adipiscing elit.
+                                Consectetur tortor nunc aliquam consectetur semper augue at.
+                            </Typography>
+                        </StyledCard>
                     </Grid>
                     <Grid xs={2} lg={2}>
-                        <Typography variant='h5' color='#fff' fontWeight='bolder'>
-                            Etape 2
-                        </Typography>
-                        <Typography color='#fff'>
-                            Lorem ipsum dolor sit amet consectetur adipiscing elit.
-                            Consectetur tortor nunc aliquam consectetur semper augue at.
-                        </Typography>
+                        <StyledCard>
+                            <Typography variant='h5' color='#fff' fontWeight='bolder'>
+                                Etape 2
+                            </Typography>
+                            <Typography color='#fff'>
+                                Lorem ipsum dolor sit amet consectetur adipiscing elit.
+                                Consectetur tortor nunc aliquam consectetur semper augue at.
+                            </Typography>
+                        </StyledCard>
                     </Grid>
                     <Grid xs={2} lg={2}>
-                        <Typography variant='h5' color='#fff' fontWeight='bolder'>
-                            Etape 3
-                        </Typography>
-                        <Typography color='#fff'>
-                            Lorem ipsum dolor sit amet consectetur adipiscing elit.
-                            Consectetur tortor nunc aliquam consectetur semper augue at.
-                        </Typography>
+                        <StyledCard>
+                            <Typography variant='h5' color='#fff' fontWeight='bolder'>
+                                Etape 3
+                            </Typography>
+                            <Typography color='#fff'>
+                                Lorem ipsum dolor sit amet consectetur adipiscing elit.
+                                Consectetur tortor nunc aliquam consectetur semper augue at.
+                            </Typography>
+                        </StyledCard>
                     </Grid>
                     <Grid xs={2} lg={2}>
-                        <Typography variant='h5' color='#fff' fontWeight='bolder'>
-                            Etape 4
-                        </Typography>
-                        <Typography color='#fff'>
-                            Lorem ipsum dolor sit amet consectetur adipiscing elit.
-                            Consectetur tortor nunc aliquam consectetur semper augue at.
-                        </Typography>
+                        <StyledCard>
+                            <Typography variant='h5' color='#fff' fontWeight='bolder'>
+                                Etape 4
+                            </Typography>
+                            <Typography color='#fff'>
+                                Lorem ipsum dolor sit amet consectetur adipiscing elit.
+                                Consectetur tortor nunc aliquam consectetur semper augue at.
+                            </Typography>
+                        </StyledCard>
                     </Grid>
                     <Grid xs={2} lg={2} item>
 

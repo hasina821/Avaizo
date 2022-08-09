@@ -4,6 +4,7 @@ import {Grid, Divider, Typography,Box, Button} from '@mui/material';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import Color from "../../Back_office/components/palette/color";
 
 const useStyles = makeStyles((theme)=>({
      root: {
@@ -22,7 +23,7 @@ const Section_5 = ()=> {
         };
      const slider = React.useRef(null);
     return(
-     <Box sx={{backgroundColor:'#000',height:'100vh'}}>
+     <Box sx={{backgroundColor:Color.paletteBluedark,height:'100vh'}}>
           <Grid container  padding='200px 50px 24px 50px'> 
                <Grid item sm={5} xs={5}>
                     <Slider {...settings} ref={slider} sx={{width:'20%'}}>

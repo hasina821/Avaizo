@@ -2,9 +2,10 @@ import React from "react"
 import {Box,Grid, Typography,Avatar,Stack} from "@mui/material"
 import Slider from "react-slick";
 import {styled} from "@mui/styles"
+import Color from "../../Back_office/components/palette/color";
 
 const StyledBox = styled(Box)({
-    backgroundColor:'#000',
+    backgroundColor:Color.paletteBluedark,
     borderRadius:'50px 50px',
     color:'#fff',
     width:'100%',
@@ -74,7 +75,6 @@ const Section_9 = ()=>{
                                     {op.auteur}
                                 </Typography>
                             </Stack>
-                            
                             </Grid>
                         </Grid>
                     </Box>

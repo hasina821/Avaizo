@@ -11,6 +11,7 @@ import {Link} from "react-router-dom"
 import { useRef } from 'react';
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 import { useLocation } from 'react-router-dom';
+import Color from '../../Back_office/components/palette/color';
 
 const menu = [
      {
@@ -34,10 +35,10 @@ const menu = [
 const useStyles = makeStyles((theme)=>({
      vertical:{
           borderRight:'1px solid white',
-          backgroundColor:'#000'
+          backgroundColor:Color.paletteBluedark
      },
      root: {
-          backgroundColor:'#2c3e50',
+          backgroundColor:Color.paletteBluedark,
           '& a':{
                textDecoration:'none',
                color:'#fff',
@@ -75,7 +76,7 @@ const useStyles = makeStyles((theme)=>({
      },
      roundanimated:{
           position: 'absolute',
-          backgroundColor:'#000',
+          backgroundColor:Color.paletteBluedark,
           width:'70px',
           height:'70px',
           right:'12px',
@@ -117,7 +118,7 @@ const Navbar = () => {
                     <Grid lg={1/2} xs={1/2} item className={classes.vertical}>
                     </Grid>
                     <Grid lg={23/2} xs={23/2} item>
-                         <AppBar elevation={1} position="static" sh  sx={{  background:'#000' }} className={classes.AppBar}>
+                         <AppBar elevation={1} position="static" sh  sx={{  background:Color.paletteBluedark }} className={classes.AppBar}>
                               <Grid container sx={{marginTop:'0%'}}
                               justifyContent='center' 
                               textAlign='end'
@@ -150,7 +151,7 @@ const Navbar = () => {
                                         <Box>
                                              <Link to='/login'>
                                                   <Button 
-                                                       sx={{background:'#c0392b',}} 
+                                                       sx={{background:Color.paletteOrange,color:'##F55619'}} 
                                                        variant="contained"  
                                                        className={classes.btnConnexion}
                                                        //onClick={/*deconnexion*/}

@@ -1,6 +1,7 @@
 import React from "react"
 import { makeStyles } from '@mui/styles';
 import {Grid, Typography,Box, Button} from '@mui/material';
+import Color from "../../Back_office/components/palette/color";
 
 const useStyles = makeStyles((theme)=>({
      root: {
@@ -11,7 +12,7 @@ const useStyles = makeStyles((theme)=>({
 const Section_2 = ()=> {
      const classes = useStyles(); 
     return(
-          <Box style={{backgroundColor:'#fff'}}>
+          <Box style={{backgroundColor:Color.paletteBluedark}}>
                <Grid container style={{
                     padding: '50px 100px 100px 100px' ,
                }}>  

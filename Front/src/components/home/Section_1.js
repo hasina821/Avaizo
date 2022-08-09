@@ -3,6 +3,7 @@ import { makeStyles } from '@mui/styles';
 import {Grid, Divider, Typography,Box, Button,Stack} from '@mui/material';
 import {useTranslation } from "react-i18next";
 import {Link} from "react-router-dom"
+import Color from "../../Back_office/components/palette/color";
 
 
 const useStyles = makeStyles((theme)=>({
@@ -10,12 +11,12 @@ const useStyles = makeStyles((theme)=>({
           borderRight:'1px solid white'
      },
      sec2:{
-          backgroundImage:'url(https://1.bp.blogspot.com/-QmUDvE2qqMk/Udfdz8V5gjI/AAAAAAAAEgs/jWZHPBw3UmQ/s1600/Thor_the_dark_world_by-fanchabie.blogspot.com_03.jpg)',
+          backgroundImage:'url(/fond.svg)',
           backgroundRepeat:'no-repeat',
      },
      root: {
         height:'100vh',
-        backgroundColor:'#000', 
+        backgroundColor:Color.paletteBluedark, 
        '&.cardhelp':{
             backgroundColor:'red'
        }
@@ -34,11 +35,11 @@ const Section_1 = ()=> {
     return(
         <Box sx={{}} className={classes.root}>
         <Grid container >
-             <Grid item sm={1/2} xs={1/2} className={classes.vertical} sx={{backgroundColor:'#000',height:'100vh'}}>
+             <Grid item sm={1/2} xs={1/2} className={classes.vertical} sx={{backgroundColor:Color.paletteBluedark,height:'100vh'}}>
                   
              </Grid>
              <Grid item sm={6} xs={6} style={{ 
-                  background: "#000",
+                  background: Color.paletteBluedark,
                   position: 'relative',
                   overflow: 'hidden',
                   paddingTop: '10px',
@@ -83,23 +84,22 @@ const Section_1 = ()=> {
                                  <Grid item sm={6} xs={6}>
                                       <Button
                                       sx={{
-                                           background:'white',
+                                           background:Color.paleteTealRadiant,
                                            borderRadius:'80px',
-                                           color: '#fff',
                                            padding:'20px',
                                            width:'90%',
-                                           color:'#292c32',
+                                           fontWeight:'bold',
+                                           color:'#fff',
                                            transition:'transform 1s',
                                            cursor:'pointer',
                                            '&:hover':{
-                                                background:'white',
-                                                background:'#ffd584',
+                                                background:Color.paletteTeal1,
                                                 transform:'translateY(-5px) !important',
                                                 boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',
                                            }
                                       }}
                                       variant="contained" 
-                                      color="success">
+                                      >
                                            Commencer
                                       </Button>
                                       
@@ -112,7 +112,7 @@ const Section_1 = ()=> {
                                       <Button 
                                            color="success"
                                            sx={{
-                                             background:'#c0392b',
+                                             background:Color.paletteTeal1,
                                                 borderRadius:'80px',
                                                 color: '#fff',
                                                 padding:'20px',
@@ -120,9 +120,10 @@ const Section_1 = ()=> {
                                                 borderColor:'white',
                                                 transition:'background,transform 2s',
                                                 cursor:'pointer',
+                                                fontWeight:'bold',
                                                 '&:hover':{
-                                                     background:'#ffd584',
-                                                     color:'#292c32',
+                                                     background:Color.paleteTealRadiant,
+                                                     color:'#fff',
                                                      borderColor:'white',
                                                      transform:'translateY(-5px) !important',
                                                      boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',
@@ -139,7 +140,7 @@ const Section_1 = ()=> {
                        </Grid>       
                   </Grid>  
              </Grid>
-             <Grid item className={classes.sec2} sm={5} xs={5} sx={{backgroundColor:'#000'}}>  
+             <Grid item className={classes.sec2} sm={5} xs={5}>  
              </Grid>
         </Grid>
    </Box>

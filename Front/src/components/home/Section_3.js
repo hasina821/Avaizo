@@ -2,6 +2,7 @@ import React,{useEffect,useState} from "react"
 import { makeStyles } from '@mui/styles';
 import {Grid, Divider, Typography,Box, Button,Avatar} from '@mui/material';
 import {Link} from "react-router-dom"
+import Color from "../../Back_office/components/palette/color";
 
 const useStyles = makeStyles((theme)=>({
      root: {
@@ -24,7 +25,7 @@ const useStyles = makeStyles((theme)=>({
 const Section_3 = ()=> {
      const classes = useStyles(); 
      return(
-               <Box style={{backgroundColor:'#000',height:'100vh'}}>
+               <Box style={{backgroundColor:Color.paletteBluedark,height:'100vh'}}>
                     <Grid container spacing={2}  style={{
                          padding: '100px 100px 100px'
                     }}> 
@@ -62,12 +63,11 @@ const Section_3 = ()=> {
                                         src="https://www.themoviethemesong.com/wp-content/uploads/2015/07/Thor-The-Dark-World-Movie-Theme-Song-3.jpg"
                                         sx={{ width: '90%', height: '250px' }}
                                         />
-                                        
                                    </Grid>
                                    <Grid item sm={5} xs={5}>
                                         <Grid container>
                                              <Grid item sm={12} xs={12}>
-                                                  <Typography variant="h5" fontWeight={700} color='#c0392b'>
+                                                  <Typography variant="h5" fontWeight={700} color={Color.paletteOrange}>
                                                        Services 1
                                                   </Typography>
                                              </Grid>
@@ -95,7 +95,7 @@ const Section_3 = ()=> {
                                    <Grid item sm={5} xs={5}>
                                         <Grid container>
                                              <Grid item sm={12} xs={12}>
-                                                  <Typography variant="h5" fontWeight={700} color='#c0392b'>
+                                                  <Typography variant="h5" fontWeight={700} color={Color.paletteOrange}>
                                                        Services 2
                                                   </Typography>
                                              </Grid>
@@ -126,7 +126,7 @@ const Section_3 = ()=> {
                                                   <Grid item sm={5} xs={5}>
                                                        <Grid container>
                                                             <Grid item sm={12} xs={12}>
-                                                                 <Typography variant="h5" fontWeight={700} color='#c0392b'>
+                                                                 <Typography variant="h5" fontWeight={700} color={Color.paletteOrange}>
                                                                      {item.title}
                                                                  </Typography>
                                                             </Grid>
