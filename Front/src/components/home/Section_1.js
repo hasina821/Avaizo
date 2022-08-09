@@ -2,8 +2,8 @@ import React,{useEffect} from "react"
 import { makeStyles } from '@mui/styles';
 import {Grid, Divider, Typography,Box, Button,Stack} from '@mui/material';
 import {useTranslation } from "react-i18next";
-import {useSelector} from "react-redux"
 import {Link} from "react-router-dom"
+
 
 const useStyles = makeStyles((theme)=>({
      vertical:{
@@ -29,12 +29,11 @@ const useStyles = makeStyles((theme)=>({
 
 const Section_1 = ()=> {
     const classes = useStyles(); 
-    const theme=useSelector(state=>state.theme)
     useEffect(()=>{
     })
     return(
         <Box sx={{}} className={classes.root}>
-        <Grid container id={theme} >
+        <Grid container >
              <Grid item sm={1/2} xs={1/2} className={classes.vertical} sx={{backgroundColor:'#000',height:'100vh'}}>
                   
              </Grid>
@@ -59,9 +58,11 @@ const Section_1 = ()=> {
                                       }}/>
                                  </Grid>
                                  <Grid item sm={9} xs={9} marginLeft={3}>
-                                      <Typography variant="p" fontWeight='bolder' color='#fff'>
-                                        
+                                   <Link to={`/admin/`}>
+                                      <Typography className="text-yellow-500" variant="p">
+                                            Admin
                                         </Typography>
+                                   </Link>
                                  </Grid>
                             </Grid>
                        </Grid>  

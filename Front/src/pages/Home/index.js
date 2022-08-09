@@ -1,8 +1,6 @@
 import React,{useEffect,useState} from "react"
 import { Fragment } from "react"
 import {useTranslation} from "react-i18next"
-import {useDispatch, useSelector} from "react-redux"
-import { getUsers } from "../../redux/users/user";
 import { makeStyles } from '@mui/styles';
 import {Grid, Divider, Typography,Box, Button} from '@mui/material';
 import Section_1 from '../../components/home/Section_1'
@@ -22,19 +20,12 @@ const useStyles = makeStyles((theme)=>({
 
 const Home = ()=> {
 
-     const theme = useSelector(state=>state.theme);
-     const {users} = useSelector((state) => state.user);
      const { t } = useTranslation();
      const [images,setImages] = useState([])
-     const dispatch = useDispatch()
-
-     useEffect(() => {
-
-          dispatch(getUsers())
-     }, [])
+     
     return(
      <Fragment>
-          <div id={theme} >
+          <div  >
                <Section_1/>
                <Section_6/>
                <Section_3/>

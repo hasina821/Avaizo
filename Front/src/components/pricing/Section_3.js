@@ -39,6 +39,10 @@ const membre = [
 
   ]
 
+
+    const ITEM_HEIGHT = 48;
+    const ITEM_PADDING_TOP = 8;
+
   const MenuProps = {
     PaperProps: {
       style: {
@@ -47,9 +51,7 @@ const membre = [
       },
     },
   };
-    const ITEM_HEIGHT = 48;
-    const ITEM_PADDING_TOP = 8;
-
+    
 const  Section_3 = () =>{
     const [secret,setSecret]=React.useState(false)
 

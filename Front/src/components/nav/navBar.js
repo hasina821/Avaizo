@@ -4,17 +4,13 @@ import Box from '@mui/material/Box';
 import IconButton from '@mui/material/IconButton';
 import { Grid,ListItem,MenuItem,ListItemText, Button} from '@mui/material';
 import { makeStyles } from '@mui/styles';
-import { useSelector,useDispatch } from 'react-redux';
 import { NavLink } from 'react-router-dom'
 import Brightness4Icon from '@mui/icons-material/Brightness4';
 import Brightness7Icon from '@mui/icons-material/Brightness7';
-import {toggle} from "../../redux/features/theme"
-import {useSpring, animated} from 'react-spring'
 import {Link} from "react-router-dom"
 import { useRef } from 'react';
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 import { useLocation } from 'react-router-dom';
-import MessengerCustomerChat from 'react-messenger-customer-chat';
 
 const menu = [
      {
@@ -103,12 +99,6 @@ const LinkCustom = (path, label, className) =>{
 }
 const Navbar = () => {
      const classes = useStyles(); 
-     const mode=useSelector(state=>state.theme)
-     const [styleHoverAnimate, setStyleHoverAnimate] = useState({ rotateZ: 0, borderRadius:'10px'})
-     const [loading, setLoading] = useState(false)
-     const refContainer = document.getElementById("paypal")
-     const dispatch=useDispatch()
-     const theme=useSelector(state=>state.theme)
      const loc = localStorage.getItem("user")
      console.log(loc)
      const usePathname = () => {
@@ -116,10 +106,6 @@ const Navbar = () => {
           return location.pathname;
      }
 
-     const StyleHover = useSpring({
-          from: { rotateZ: 0, borderRadius:'10px', },
-          to: { ...styleHoverAnimate },
-     })
 
      const deconnexion = () =>{
           console.log("deconnexion");
@@ -178,19 +164,10 @@ const Navbar = () => {
                                    <Grid item lg={1} textAlign='center' marginTop={-2.5}  justifyContent='center'>
                                         <ListItem  sx={{ cursor: 'pointer' }}>
                                              <MenuItem sx={{ '&:hover':{background:'none'}}}
-                                             onMouseOver={()=>setStyleHoverAnimate({ rotateZ: 180, borderRadius:'100%'})}
-                                             onMouseLeave={()=>setStyleHoverAnimate({ rotateZ: -180, borderRadius:'10px'})}
                                              >
-                                             <animated.div 
-                                                       className={classes.roundanimated}
-                                                       style={{
-                                                            ...StyleHover
-                                                       }}
-                                             >
-                                                  </animated.div> 
                                                        <Box style={{padding:'20px 4px'}}>
-                                                            <IconButton sx={{ ml: 1 }} onClick={()=>dispatch(toggle())} color="inherit">
-                                                            {mode === 'dark' ? <Brightness7Icon /> : <Brightness4Icon />}
+                                                            <IconButton sx={{ ml: 1 }} color="inherit">
+                                                             <Brightness7Icon />
                                                             </IconButton>
                                                        </Box>
                                              </MenuItem>
@@ -224,10 +201,7 @@ const Navbar = () => {
                     
                </PayPalScriptProvider>
                */}
-               <MessengerCustomerChat
-                    pageId="114031570517893"
-                    appId="1284136828742745"
-               />
+               
                {/*<MenuDialog/>*/}
           </Box>
 

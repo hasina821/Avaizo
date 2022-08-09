@@ -1,7 +1,6 @@
 import React,{useEffect,useState} from "react"
 import { Fragment } from "react"
 import {useTranslation} from "react-i18next"
-import {useDispatch, useSelector} from "react-redux"
 import { makeStyles } from '@mui/styles';
 import {Grid, MenuItem, Typography,Box, Select,FormControl, Button} from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
@@ -20,11 +19,10 @@ const useStyles = makeStyles((theme)=>({
 
 const Capsule = ()=> {
 
-     const theme = useSelector(state=>state.theme);
      const classes = useStyles()
     return(
      <Fragment>
-          <div id={theme} >
+          <div >
               <Box  className={classes.root}> 
                     <Grid container >  
                         <Grid item sm={12} xs={12} style={{ 

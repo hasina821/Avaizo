@@ -3,7 +3,6 @@ import {Box,Grid, Typography,Avatar,Stack} from "@mui/material"
 import Slider from "react-slick";
 import {styled} from "@mui/styles"
 
-
 const StyledBox = styled(Box)({
     backgroundColor:'#000',
     borderRadius:'50px 50px',

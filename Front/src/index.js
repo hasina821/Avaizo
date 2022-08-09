@@ -1,13 +1,11 @@
 
-import React, { Fragment } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import i18n from 'i18next';
 import AppRouter from "./router/index"
 import {useTranslation,initReactI18next} from "react-i18next"
 import LanguageDetector from 'i18next-browser-languagedetector';
 import HttpApi from "i18next-http-backend"
-import {Provider} from "react-redux"
-import store from "./redux/store"
 import "./index.css"
 
 
@@ -32,9 +30,7 @@ i18n
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={store}>
       <AppRouter />
-    </Provider>
   </React.StrictMode>,
   document.getElementById('app')
 );

@@ -1,12 +1,10 @@
 import React,{useEffect,useState} from "react"
 import { Fragment } from "react"
-import {useDispatch, useSelector} from "react-redux"
 import { makeStyles } from '@mui/styles';
 import {Grid, MenuItem, Typography,Box, Select,FormControl, Button} from '@mui/material';
 import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import {Link} from "react-router-dom";
 
 const useStyles = makeStyles((theme)=>({
      root: {
@@ -36,12 +34,10 @@ const useStyles = makeStyles((theme)=>({
  }));
 
 const Footer = ()=> {
-
-     const theme = useSelector(state=>state.theme);
      const classes = useStyles()
     return(
      <Fragment>
-          <div id={theme} >
+          <div >
               <Box marginTop='4%'  padding='30px 0px 20px 180px' style={{
                 backgroundColor:'#000',
                 height:'80vh',

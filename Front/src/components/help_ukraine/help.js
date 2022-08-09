@@ -3,7 +3,6 @@ import { makeStyles } from "@mui/styles"
 import { Grid,Box,Typography } from "@mui/material"
 import {gsap, Power3} from 'gsap';
 
-
 const useStyles=makeStyles({
      card:{
           position: 'absolute',
