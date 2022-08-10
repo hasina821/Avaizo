@@ -1,0 +1,177 @@
+
+.container .wrapper .home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.container .wrapper .home p{
+    font-size: .75rem;
+    letter-spacing: .3rem;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.container .wrapper .home h5{
+    margin-top: 160px;
+    font-size: 1.8rem;
+    font-weight: 600;
+    padding-right: 360px;
+}
+
+/* Header */
+.header{
+    height: 100px;
+    background-color: #010C1E;
+}
+
+.header .inner-header {
+    position: relative;
+    z-index: 10;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .inner-header .logo a {
+    font-weight: 700;
+    text-decoration: none;
+    color: #191919;
+}
+
+.header .inner-header .menu button{
+    border: none;
+    background-color: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 0.8rem;
+    color: #fff;
+}
+
+/* Hamburger menu or navigation */
+.hamburger-menu{
+    display: none; 
+    z-index: 9;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+}
+
+.hamburger-menu .menu-secondary-background-color{
+    background-color: #191919;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+.hamburger-menu .menu-layer{
+    position: relative;
+    background-color: red;
+    height: 100%;
+    overflow: hidden;
+}
+
+.hamburger-menu .menu-layer .menu-city-background{
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+}
+
+.hamburger-menu .menu-layer .wrapper {
+    position: relative;
+}
+
+.hamburger-menu .menu-layer .wrapper  .menu-links{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    top:200px;
+}
+
+.hamburger-menu .menu-layer .wrapper  .menu-links nav{
+    display: block;
+}
+
+.hamburger-menu .menu-layer .wrapper  .menu-links nav ul{
+    padding: 0;
+    margin: 0;
+}
+
+.hamburger-menu .menu-layer .wrapper  .menu-links nav ul li {
+    list-style: none;
+    font-size: 6rem;
+    font-weight: 700;
+    cursor: pointer;
+    height: 135px;
+    overflow: hidden;
+    position: relative;
+    width: 700px;
+}
+
+.hamburger-menu .menu-layer .wrapper  .menu-links nav ul li a {
+    position: absolute;
+    color: #fff;
+    text-decoration: none;
+}
+
+.hamburger-menu .menu-layer .wrapper  .menu-links nav ul li a:hover{
+    color: #191919;
+}
+
+.hamburger-menu .menu-layer .wrapper  .menu-links .info {
+    color:#fff;
+    width: 300px;
+}
+
+.hamburger-menu .menu-layer .wrapper  .menu-links .info  h3{
+    font-size: 1.2rem;
+    margin: 8px auto;
+}
+
+.hamburger-menu .menu-layer .wrapper  .menu-links .info p{
+    margin: 0 auto;
+    font-size: 0.8rem;
+}
+
+.hamburger-menu .menu-layer .wrapper  .menu-links .locations{
+    position: absolute;
+    bottom: -80px;
+    color: #fff;
+    margin-top: 16px;
+    font-size: .8rem;
+    font-weight: 600;
+}
+
+.hamburger-menu .menu-layer .wrapper  .menu-links .locations span:first-child{
+    margin-left: 64px;
+}
+
+.hamburger-menu .menu-layer .wrapper  .menu-links .locations span{
+    cursor: pointer;
+    margin: 0 32px;
+    transition: .3s ease-in-out;
+}
+
+.hamburger-menu .menu-layer .wrapper  .menu-links .locations span:hover{
+    background-color: #191919;
+    padding: 8px 24px;
+    border-radius: 4px;
+}

@@ -1,29 +1,38 @@
-import React, { useState } from "react";
-import {Typography,Button,Stack,TextField,FormControlLabel,Switch,InputAdornment} from "@mui/material";
+import React, { useEffect, useState } from "react";
+import { Box, Typography, Button, Stack, TextField, FormControlLabel, Switch, InputAdornment } from "@mui/material";
 import Visibility from "@mui/icons-material/Visibility"
 import VisibilityOff from "@mui/icons-material/VisibilityOff"
 // import AlternateEmailTwoToneIcon from "@mui/icons-material/AlternateEmailTwoToneIcon"
 import { Link } from "react-router-dom";
-import { ReCAPTCHA } from "react-google-recaptcha";
 import { StyleAuth } from "./Styles";
+
 
 const Login = () => {
     const styles = StyleAuth()
-    const [values, setValues] = useState({password: "",email: "",showPassword: false,})
-    
-    const handleChange = (field) => (e) => {setValues({ ...values, [field]: e.target.value })}
-    const handleClickShowPassword = () => {setValues({ ...values, showPassword: !values.showPassword })}
-    const handleMouseDownPassword = (e) => {e.preventDefault()}
+    const [verified, setVerified] = useState(false)
+    const [values, setValues] = useState({ password: "", email: "", souviens: false, showPassword: false, })
+
+    const handleChange = (field) => (e) => { setValues({ ...values, [field]: e.target.value }) }
+    const handleClickShowPassword = () => { setValues({ ...values, showPassword: !values.showPassword }) }
+    const handleMouseDownPassword = (e) => { e.preventDefault() }
+    const changeRecaptcha = (value) => console.log(value)
+    useEffect(() => {
+        console.log(values.email, values.password)
+    }, [values.email, values.password])
     return (
         <>
             <TextField variant="outlined" size="small" className={styles.textField} label="Email" type="email" InputLabelProps={{
                 className: styles.label
-            }} InputProps={{
-                className: styles.root, endAdornment: (<InputAdornment position="end">
-                    {/* <AlternateEmailTwoToneIcon className={styles.icon} /> */}
-                </InputAdornment>
-                ),
             }}
+                InputProps={{
+                    className: styles.root,
+                    endAdornment: (<InputAdornment position="end">
+                        {/* <AlternateEmailTwoToneIcon className={styles.icon} /> */}
+                    </InputAdornment>
+                    )
+                }}
+                value={values.email}
+                onChange={handleChange("email")}
             />
             <TextField variant="outlined" size="small" className={styles.textField} label="Mot de passe" type={values.showPassword ? 'text' : 'password'}
                 InputLabelProps={{ className: styles.label }}
@@ -35,6 +44,8 @@ const Login = () => {
                         </InputAdornment>
                     ),
                 }}
+                value={values.password}
+                onChange={handleChange("password")}
             />
 
             <FormControlLabel sx={{ color: "gray", fontSize: '12px' }} control={<Switch size="small" />} label="Se souviens de moi ? " />
@@ -42,7 +53,7 @@ const Login = () => {
                 <Button className={styles.buttonConnexion} variant="contained">Connecter</Button>
                 <Button className={styles.buttonCancel} variant="contained">Annuler</Button>
             </Stack>
-            <ReCAPTCHA sitekey="6Ldw9-sfAAAAAH-ivOczLDNvAuNVvnVrfV67I1Wx"/>
+            
             <Typography color="gray" fontSize="14px" textAlign="center">
                 Vous n'avez pas encore un compte? &nbsp;
                 <Link to="/auth/register" style={{ textDecoration: 'underline', color: 'blue' }}>s'inscrire</Link>

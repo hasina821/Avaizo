@@ -1,13 +1,13 @@
-import React,{ useState} from 'react';
+import React, { useState } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import IconButton from '@mui/material/IconButton';
-import { Grid,ListItem,MenuItem,ListItemText, Button} from '@mui/material';
+import { Grid, ListItem, MenuItem, ListItemText, Button } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 import { NavLink } from 'react-router-dom'
 import Brightness4Icon from '@mui/icons-material/Brightness4';
 import Brightness7Icon from '@mui/icons-material/Brightness7';
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom"
 import { useRef } from 'react';
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 import { useLocation } from 'react-router-dom';
@@ -32,60 +32,60 @@ const menu = [
      },
 ]
 
-const useStyles = makeStyles((theme)=>({
-     vertical:{
-          borderRight:'1px solid white',
-          backgroundColor:Color.paletteBluedark
+const useStyles = makeStyles((theme) => ({
+     vertical: {
+          borderRight: '1px solid white',
+          backgroundColor: Color.paletteBluedark
      },
      root: {
-          backgroundColor:Color.paletteBluedark,
-          '& a':{
-               textDecoration:'none',
-               color:'#fff',
-               fontSize:'20px',
-               fontFamily:'Plusjakartasans, sans-serif',
-               transition:"color 5s linear",
-               fontWeight:'bold',
-               '&:hover':{
-                    color:'#055f5b',
-                    fontWeight:'bold',
-                    cursor:'pointer !important',
+          backgroundColor: Color.paletteBluedark,
+          '& a': {
+               textDecoration: 'none',
+               color: '#fff',
+               fontSize: '20px',
+               fontFamily: 'Plusjakartasans, sans-serif',
+               transition: "color 5s linear",
+               fontWeight: 'bold',
+               '&:hover': {
+                    color: '#055f5b',
+                    fontWeight: 'bold',
+                    cursor: 'pointer !important',
                }
           },
      },
      AppBar: {
-          alignItems:'center',
-          paddingTop:'20px',
-         color:'#fff',
-         lineHeight:'1.125em'
+          alignItems: 'center',
+          paddingTop: '20px',
+          color: '#fff',
+          lineHeight: '1.125em'
      },
      linkClassName: {
-          color:'#fff',
-  
-     },
-     btnConnexion:{
-          borderRadius:'80px !important',
           color: '#fff',
-          padding:'12px !important',
-          transition:'transform 3s',
-          '&:hover':{
-               background:'#055f5b !important',
-               transform:'translateY(-2px) !important',
-               
+
+     },
+     btnConnexion: {
+          borderRadius: '80px !important',
+          color: '#fff',
+          padding: '12px !important',
+          transition: 'transform 3s',
+          '&:hover': {
+               background: '#055f5b !important',
+               transform: 'translateY(-2px) !important',
+
           }
      },
-     roundanimated:{
+     roundanimated: {
           position: 'absolute',
-          backgroundColor:Color.paletteBluedark,
-          width:'70px',
-          height:'70px',
-          right:'12px',
-          borderRadius:'10px',
+          backgroundColor: Color.paletteBluedark,
+          width: '70px',
+          height: '70px',
+          right: '12px',
+          borderRadius: '10px',
      }
- }));
+}));
 
 
-const LinkCustom = (path, label, className) =>{
+const LinkCustom = (path, label, className) => {
      return (
           <NavLink
                to={path}
@@ -93,13 +93,13 @@ const LinkCustom = (path, label, className) =>{
                     fontWeight: "bold",
                     color: "red"
                }}
-               >
+          >
                {label}
           </NavLink>
      )
 }
-const Navbar = () => {
-     const classes = useStyles(); 
+const AncienNavbar = () => {
+     const classes = useStyles();
      const loc = localStorage.getItem("user")
      console.log(loc)
      const usePathname = () => {
@@ -108,39 +108,38 @@ const Navbar = () => {
      }
 
 
-     const deconnexion = () =>{
+     const deconnexion = () => {
           console.log("deconnexion");
      }
 
      return (
           <Box sx={{ flexGrow: 1 }} className={classes.root}>
                <Grid container>
-                    <Grid lg={1/2} xs={1/2} item className={classes.vertical}>
+                    <Grid lg={1 / 2} xs={1 / 2} item className={classes.vertical}>
                     </Grid>
-                    <Grid lg={23/2} xs={23/2} item>
-                         <AppBar elevation={1} position="static" sh  sx={{  background:Color.paletteBluedark }} className={classes.AppBar}>
-                              <Grid container sx={{marginTop:'0%'}}
-                              justifyContent='center' 
-                              textAlign='end'
+                    <Grid lg={23 / 2} xs={23 / 2} item>
+                         <AppBar elevation={1} position="static" sh sx={{ background: Color.paletteBluedark }} className={classes.AppBar}>
+                              <Grid container sx={{ marginTop: '0%' }}
+                                   justifyContent='center'
+                                   textAlign='end'
                               >
                                    <Grid lg={1} xs={1} item textAlign='start'>
-                                        <img 
+                                        <img
                                              src='/crew.png'
                                              width={100}
                                              height={100}
-
                                         />
                                    </Grid>
                                    <Grid lg={3} xs={3} item >
-                                        
+
                                    </Grid>
                                    <Grid item lg={5}>
-                                        <ListItem  style={{textAlign:'center'}}>
+                                        <ListItem style={{ textAlign: 'center' }}>
                                              {
-                                                  menu.map((item,index) => {
-                                                       return(
-                                                            <ListItemText ty  key={`key-${index}`} style={{ fontSize:24,fontWeight:'bold',color:'#fff'}}>
-                                                                 {LinkCustom(item.path,item.value)} 
+                                                  menu.map((item, index) => {
+                                                       return (
+                                                            <ListItemText ty key={`key-${index}`} style={{ fontSize: 24, fontWeight: 'bold', color: '#fff' }}>
+                                                                 {LinkCustom(item.path, item.value)}
                                                             </ListItemText>
                                                        )
                                                   })
@@ -149,28 +148,28 @@ const Navbar = () => {
                                    </Grid>
                                    <Grid lg={1} textAlign='center' marginLeft={-2} item >
                                         <Box>
-                                             <Link to='/login'>
-                                                  <Button 
-                                                       sx={{background:Color.paletteOrange,color:'##F55619'}} 
-                                                       variant="contained"  
+                                             <Link to='auth/login'>
+                                                  <Button
+                                                       sx={{ background: Color.paletteOrange, color: '##F55619' }}
+                                                       variant="contained"
                                                        className={classes.btnConnexion}
-                                                       //onClick={/*deconnexion*/}
-                                                       >
+                                                  //onClick={/*deconnexion*/}
+                                                  >
                                                        Se connecter
                                                   </Button>
                                              </Link>
                                         </Box>
                                    </Grid>
-                                   
-                                   <Grid item lg={1} textAlign='center' marginTop={-2.5}  justifyContent='center'>
-                                        <ListItem  sx={{ cursor: 'pointer' }}>
-                                             <MenuItem sx={{ '&:hover':{background:'none'}}}
+
+                                   <Grid item lg={1} textAlign='center' marginTop={-2.5} justifyContent='center'>
+                                        <ListItem sx={{ cursor: 'pointer' }}>
+                                             <MenuItem sx={{ '&:hover': { background: 'none' } }}
                                              >
-                                                       <Box style={{padding:'20px 4px'}}>
-                                                            <IconButton sx={{ ml: 1 }} color="inherit">
-                                                             <Brightness7Icon />
-                                                            </IconButton>
-                                                       </Box>
+                                                  <Box style={{ padding: '20px 4px' }}>
+                                                       <IconButton sx={{ ml: 1 }} color="inherit">
+                                                            <Brightness7Icon />
+                                                       </IconButton>
+                                                  </Box>
                                              </MenuItem>
                                         </ListItem>
                                    </Grid>
@@ -202,11 +201,11 @@ const Navbar = () => {
                     
                </PayPalScriptProvider>
                */}
-               
+
                {/*<MenuDialog/>*/}
           </Box>
 
      );
 }
 
-export default Navbar
+export default AncienNavbar

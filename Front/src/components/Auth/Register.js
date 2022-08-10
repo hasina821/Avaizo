@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 import { StyleAuth } from "./Styles"
 
 const Register = () => {
-    const [values, setValues] = useState({password: "",email: "",showPassword: false,});
+    const [values, setValues] = useState({userName:"",password: "",email: "",showPassword: false,});
     const styles = StyleAuth();
 
     const handleChange = (field) => (e) => {setValues({ ...values, [field]: e.target.value });};
@@ -26,6 +26,7 @@ const Register = () => {
                         </InputAdornment>
                     ),
                 }}
+                value={values.userName}
             />
             <TextField variant="outlined" size="small" className={styles.textField} label="Email" type="email"
                 InputLabelProps={{className: styles.label}}
@@ -37,6 +38,8 @@ const Register = () => {
                         </InputAdornment>
                     ),
                 }}
+                value={values.email}
+                onChange={handleChange("email")}
             />
             <TextField variant="outlined" size="small" className={styles.textField} label="Mot de passe" type={values.showPassword ? 'text' : 'password'}
                 InputLabelProps={{className: styles.label}}
@@ -48,6 +51,8 @@ const Register = () => {
                         </InputAdornment>
                     ),
                 }}
+                value={values.password}
+                onChange={handleChange("password")}
             />
             <Stack sx={{ width: "100%", margin: "10px 0" }} direction="row" spacing={2}>
                 <Button className={styles.buttonConnexion} variant="contained">Enregistrer</Button>
