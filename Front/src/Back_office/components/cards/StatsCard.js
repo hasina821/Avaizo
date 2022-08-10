@@ -39,7 +39,7 @@ const StatsCard = () =>{
                                 {stat.icon}
                             </div>
                             <span
-                            className="text-xs font-medium text-accent-green"
+                            className="text-xs font-medium text-white"
                             >
                             { stat.percentage }
                             </span>

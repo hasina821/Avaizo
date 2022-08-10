@@ -12,7 +12,6 @@ const AppRouter=()=>{
                          <Route path='auth/*' element={<AuthLayout/>}/>
                          <Route path='/*' element={<UserLayout/>} />
                     </Routes>
-              
           </BrowserRouter>
      )
 }
