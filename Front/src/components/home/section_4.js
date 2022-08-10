@@ -14,7 +14,7 @@ const StyledBox=styled(Box)({
 })
 
 
-const Section_8 = ()=>{
+const Section4= ()=>{
     return(
         <> 
             <StyledBox>
@@ -64,4 +64,4 @@ const Section_8 = ()=>{
     )
 }
 
-export default Section_8;
+export default Section4;

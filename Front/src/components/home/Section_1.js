@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
      },
      banner:{
           background: Color.paletteBluedark,
-          padding:'25px',
+          padding:'25px 50px',
           display:'flex',
           alignItems:'center'
      },
@@ -46,7 +46,7 @@ const useStyles = makeStyles((theme) => ({
           display:'flex',
           alignItems:'center',
           height:'100%',
-          padding:'20px'
+          padding:'50px'
      }
 }));
 
@@ -58,12 +58,12 @@ const Section1 = () => {
           <Box sx={{}} className={classes.root}>
                <Box className={classes.vertical}></Box>
                <Grid container sx={{height:'100%',position:'relative'}}>
-                    <Box sx={{position:'absolute',top:'25px',left:'25px'}}>
+                    <Box sx={{position:'absolute',top:'50px',left:'50px'}}>
                          <Link to={`/admin/home`}>
                               <Typography className="text-yellow-500" variant="p">Admin</Typography>
                          </Link>
                     </Box>
-                    <Grid item sm={8} xs={8} className={classes.banner}>
+                    <Grid item sm={7} xs={7} className={classes.banner}>
                         <Box>
                               <Typography variant="h2" color='#fff' fontWeight='bolder'>
                                    Un site web pour la reservation en ligne au cinema
@@ -75,7 +75,7 @@ const Section1 = () => {
                               <Button variant="contained" className={classes.btnStart}>Commencer</Button>
                         </Box>
                     </Grid>
-                    <Grid item xs={4} className={classes.imageSection}>
+                    <Grid item xs={5} className={classes.imageSection}>
                          <img src="/fond.svg" alt="" style={{objectFit:"cover"}}/>
                     </Grid>
                </Grid>

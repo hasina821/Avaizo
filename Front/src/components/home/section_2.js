@@ -6,18 +6,17 @@ import Color from "../../Back_office/components/palette/color";
 const useStyles = makeStyles((theme)=>({
     root:{
         backgroundColor:Color.paletteBluedark,
-        height:'100vh',
-        padding:'50px 20px 50px 40px'
+        padding:'50px 20px 50px 40px',
     },
     title:{
         padding:'0px 15%',
         textAlign:'center'
     },
     boxItem:{
-        padding:'10px',
         backgroundColor:Color.paletteTeal3,
         boxShadow:`2px 2px 3px ${Color.paletteTeal2}`,
-        borderRadius:'3px'
+        borderRadius:'3px',
+        padding:'10px'
     }
 }));
 
@@ -30,7 +29,7 @@ const Section2 = () =>{
                         RESERVEZ VOS PLACES ICI ET SAVOUREZ VOS MOMENTS
                 </Typography>
             </Box>
-            <Grid container flexWrap="nowrap" columnGap={2} sx={{paddingLeft:2,paddingTop:'20px'}}>
+            <Grid container flexWrap="nowrap" columnGap={2} sx={{paddingLeft:2,padding:'50px'}}>
                 <Grid item xs={3} className={styles.boxItem}>
                     <Typography variant='h5' color='#fff' fontWeight='bolder'>Etape 1</Typography>
                     <Typography color='#fff'>
