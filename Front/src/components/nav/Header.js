@@ -53,11 +53,11 @@ const Header = () => {
                 <div className='inner-header'>
                     <div className='logo'>
                         <Link to="login">
-                            <img src="/crew.png" alt="logo" style={{width:'80px',height:'70px',objectFit:'cover'}}/>
+                            <img src="/crew.png" alt="logo" style={{width:'50px',height:'50px',objectFit:'cover'}}/>
                         </Link>
                     </div>
                     <div className='menu'>
-                        <IconButton disabled={disabled} onClick={handleMenu} size="large"><List/></IconButton>
+                        <IconButton disabled={disabled} onClick={handleMenu}><List/></IconButton>
                     </div>
                 </div>
             </div>

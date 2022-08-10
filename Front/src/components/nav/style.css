@@ -23,14 +23,13 @@
 
 /* Header */
 .header{
-    height: 100px;
+    height: 10vh;
     background-color: #010C1E;
 }
 
 .header .inner-header {
     position: relative;
     z-index: 10;
-    height: 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
