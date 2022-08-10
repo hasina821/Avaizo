@@ -1,7 +1,6 @@
 import React, { useEffect } from "react"
 import { makeStyles } from '@mui/styles';
-import { Grid, Divider, Typography, Box, Button, Stack } from '@mui/material';
-import { useTranslation } from "react-i18next";
+import { Grid,  Typography, Box, Button} from '@mui/material';
 import { Link } from "react-router-dom"
 import Color from "../../Back_office/components/palette/color";
 
@@ -51,7 +50,7 @@ const useStyles = makeStyles((theme) => ({
      }
 }));
 
-const Section_1 = () => {
+const Section1 = () => {
      const classes = useStyles();
      useEffect(() => {
      })
@@ -67,7 +66,7 @@ const Section_1 = () => {
                     <Grid item sm={8} xs={8} className={classes.banner}>
                         <Box>
                               <Typography variant="h2" color='#fff' fontWeight='bolder'>
-                                   Une site web pour la reservation en ligne au cinema
+                                   Un site web pour la reservation en ligne au cinema
                               </Typography>
                               <Typography variant="h6" color='#fff'>
                                    Lorem ipsum dolor sit amet consectetur adipiscing elit.
@@ -84,4 +83,4 @@ const Section_1 = () => {
      )
 }
 
-export default Section_1
+export default Section1

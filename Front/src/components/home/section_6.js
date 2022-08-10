@@ -1,102 +1,51 @@
 import React from "react"
-import { Grid,Box, Typography,Card } from "@mui/material"
-import { makeStyles, styled } from "@mui/styles"
+import { makeStyles } from '@mui/styles';
+import {Grid, Typography,Box, Button} from '@mui/material';
 import Color from "../../Back_office/components/palette/color";
 
 const useStyles = makeStyles((theme)=>({
-    box2: {
-        margin:'4% 4%',
-    },
-}));
+     root: {
+       
+     },
+ }));
 
-const StyledBox = styled(Box)({
-    backgroundColor:Color.paletteBluedark,
-    height:'100vh'
-})
-
-const StyledCard = styled(Box )({
-    textAlign:'center',
-    backgroundColor:Color.paletteTeal4,
-    margin:'2% 4%',
-    borderRadius :'4%',
-    boxShadow:'4px 4px 4px #10857C',
-})
-
-const Section_6 = () =>{
-    const styles=useStyles()
+const Section_6 = ()=> {
+     const classes = useStyles(); 
     return(
-        <>
-        <StyledBox>
-            <Grid container>
-                <Grid item xs={3} lg={3}>
-
-                </Grid>
-                <Grid xs={6} lg={6}>
-                        <Typography variant="h1" color='#fff' fontWeight='bolder'>
-                                RESERVEZ VOS PLACES ICI ET SAVOUREZ VOS MOMENTS
-                        </Typography>
-                </Grid>
-                <Grid xs={3} lg={3}>
-
-                </Grid>
-            </Grid>
-            <Box className={styles.box2}>
-                <Grid container spacing={2} >
-                    <Grid xs={2} lg={2} item>
-
+          <Box style={{backgroundColor:Color.paletteBluedark}}>
+               <Grid container style={{
+                    padding: '50px 100px 100px 100px' ,
+               }}>  
+                    <Grid item sm={12} xs={12}>
+                              <Typography textAlign='center' variant="h6" color='#292c32' fontWeight='bolder'>
+                                  
+                              </Typography>
                     </Grid>
-                    <Grid xs={2} lg={2}>
-                        <StyledCard>
-                            <Typography variant='h5' color='#fff' fontWeight='bolder'>
-                                Etape 1
-                            </Typography>
-                            <Typography color='#fff'>
-                                Lorem ipsum dolor sit amet consectetur adipiscing elit.
-                                Consectetur tortor nunc aliquam consectetur semper augue at.
-                            </Typography>
-                        </StyledCard>
+                    <Grid item sm={12} xs={12} paddingTop={6}>
+                         <Grid container textAlign='center' spacing={2}> 
+                              <Grid item sm={2} xs={2}>
+                                   <img src="https://www.hairun-technology.com/static/selectively-e944e6e8ba96a64064b99cfec0ec6b44.png" />
+                              </Grid> 
+                              <Grid item sm={2} xs={2}>
+                                   <img src="https://www.hairun-technology.com/static/egapt-00bd444760121914931143b0fc22de28.png" /> 
+                              </Grid>
+                              <Grid item sm={2} xs={2}>
+                                   <img src="https://assets.website-files.com/611d114cb3a54a7930597408/611d114cb3a54a51d9597434_logo-1-companies-startup-x-template.svg" />
+                              </Grid>
+                              <Grid item sm={2} xs={2}>
+                                   <img src="https://www.hairun-technology.com/static/ewattch-30437e7e498e0e43d5164a6c7bebbf5c.png" />
+                              </Grid>
+                              <Grid item sm={2} xs={2}>
+                                   <img src="https://www.hairun-technology.com/static/Abacus-02ae8b61c9056ac6b8faf81a23374d30.png" />
+                              </Grid>
+                              <Grid item sm={2} xs={2}>
+                                   <img src="https://www.hairun-technology.com/static/Apitipi-c654311bf16cf46e8ce6628528f7e804.png" />    
+                              </Grid>    
+                         </Grid> 
                     </Grid>
-                    <Grid xs={2} lg={2}>
-                        <StyledCard>
-                            <Typography variant='h5' color='#fff' fontWeight='bolder'>
-                                Etape 2
-                            </Typography>
-                            <Typography color='#fff'>
-                                Lorem ipsum dolor sit amet consectetur adipiscing elit.
-                                Consectetur tortor nunc aliquam consectetur semper augue at.
-                            </Typography>
-                        </StyledCard>
-                    </Grid>
-                    <Grid xs={2} lg={2}>
-                        <StyledCard>
-                            <Typography variant='h5' color='#fff' fontWeight='bolder'>
-                                Etape 3
-                            </Typography>
-                            <Typography color='#fff'>
-                                Lorem ipsum dolor sit amet consectetur adipiscing elit.
-                                Consectetur tortor nunc aliquam consectetur semper augue at.
-                            </Typography>
-                        </StyledCard>
-                    </Grid>
-                    <Grid xs={2} lg={2}>
-                        <StyledCard>
-                            <Typography variant='h5' color='#fff' fontWeight='bolder'>
-                                Etape 4
-                            </Typography>
-                            <Typography color='#fff'>
-                                Lorem ipsum dolor sit amet consectetur adipiscing elit.
-                                Consectetur tortor nunc aliquam consectetur semper augue at.
-                            </Typography>
-                        </StyledCard>
-                    </Grid>
-                    <Grid xs={2} lg={2} item>
-
-                    </Grid>
-                </Grid>
-            </Box>
-        </StyledBox>
-        </>
+               </Grid> 
+          </Box> 
     )
-}
+  }
 
-export default Section_6;
+export default Section_6

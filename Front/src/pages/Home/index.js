@@ -3,8 +3,8 @@ import { Fragment } from "react"
 import {useTranslation} from "react-i18next"
 import { makeStyles } from '@mui/styles';
 import {Grid, Divider, Typography,Box, Button} from '@mui/material';
-import Section_1 from '../../components/home/Section_1'
-import Section_2 from '../../components/home/Section_2'
+import Section1 from '../../components/home/Section_1'
+import Section2 from '../../components/home/section_2'
 import Section_3 from '../../components/home/Section_3'
 import Section_4 from '../../components/home/Section_4'
 import Section_5 from '../../components/home/Section_5'
@@ -26,12 +26,12 @@ const Home = ()=> {
     return(
      <Fragment>
           <div  >
-               <Section_1/>
-               <Section_6/>
+               <Section1/>
+               <Section2/>
                <Section_3/>
                <Section_8/>
                <Section_5/>
-               <Section_2/>
+               <Section_6/>
           </div>
      </Fragment > 
     )
