@@ -19,7 +19,7 @@ const StyledCard = styled(Box )({
     backgroundColor:Color.paletteTeal4,
     margin:'2% 4%',
     borderRadius :'4%',
-    boxShadow:'4px 4px 4px #10857C'
+    boxShadow:'4px 4px 4px #10857C',
 })
 
 const Section_6 = () =>{

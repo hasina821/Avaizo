@@ -1,8 +1,8 @@
 import React,{useEffect,useState} from "react"
 import { Fragment } from "react"
 import {useTranslation} from "react-i18next"
-import { makeStyles } from '@mui/styles';
-import {Grid, MenuItem, Typography,Box, Select,FormControl, Button} from '@mui/material';
+import { makeStyles,styled } from '@mui/styles';
+import {Grid, MenuItem, Typography,Box, Select,FormControl, Button,Divider} from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 import IconButton from '@mui/material/IconButton'
 import OutlinedInput from '@mui/material/OutlinedInput';
@@ -10,64 +10,76 @@ import InputAdornment from '@mui/material/InputAdornment';
 import {Pagination, PaginationItem} from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import Color from "../../Back_office/components/palette/color";
 
-const useStyles = makeStyles((theme)=>({
-     root: {
-       
-     },
- }));
+const StyledBox=styled(Box)({
+  backgroundColor:Color.paletteBluedark,
+  color:'#fff',
+  padding:'200px 20px 200px 20px',
+  height:'80vh',
+  textAlign:'center'
+})
+
 
 const Capsule = ()=> {
-
-     const classes = useStyles()
     return(
      <Fragment>
           <div >
-              <Box  className={classes.root}> 
-                    <Grid container >  
-                        <Grid item sm={12} xs={12} style={{ 
-                              background: "#c0392b",
-                              position: 'relative',
-                              overflow: 'hidden',
-                              paddingTop: '150px',
-                              paddingBottom: '150px',
-                              paddingLeft:'50px',
-                              paddingRight:'50px'
-                        }}>
-                              <Grid container >
-                                  <Grid item sm={7} xs={7} margin='20px 0px 20px 0px'>
-                                        <Typography variant="h3" color='#fff' fontWeight='bolder'>
-                                            La banque la plus transparente et la plus sûre qui soit
-                                        </Typography>
-                                  </Grid>  
-                                  <Grid item sm={6} xs={6}>
-                                        <Typography variant="h6" color='#fff'>
-                                        Lorem ipsum dolor sit amet consectetur adipiscing elit.
-                                        Consectetur tortor nunc aliquam consectetur semper augue at.
-                                        </Typography>
-                                  </Grid>         
-                              </Grid>  
-                        </Grid>
+          <StyledBox>
+                <Grid container>
+                    <Grid xs={4} lg={4} item>
+                        
                     </Grid>
-              </Box>
+                    <Grid xs={4} lg={4} item>
+                        <Typography variant='h3' sx={{fontWeight:'bold'}}>
+                            Nos clients sont toujours satisfaits de nos oeuvres et de nos services 
+                        </Typography>
+                        <Divider></Divider>
+                    </Grid>
+                    <Grid xs={4} lg={4} item>
+
+                    </Grid>
+                </Grid>
+                <Grid container>
+                    <Grid xs={3} lg={3} item>
+
+                    </Grid>
+                    <Grid xs={6} lg={6}>
+                        <Box sx={{marginTop:'8%'}}>
+                            <Typography variant='p' color='#95a5a6'>
+                            Plus de 150 diffusion ces dernieres années Lorem ipsum dolor sit amet consectetur adipiscing elit.
+                            Consectetur tortor nunc aliquam consectetur semper augue at.
+                            </Typography>
+                        </Box>
+                    </Grid>
+                    <Grid xs={3} lg={3} item>
+
+                    </Grid>
+                </Grid>
+            </StyledBox>
               <Box  padding='20px 0px 20px 180px' style={{
                 borderBottomLeftRadius:'50px',
                 borderBottomRightRadius:'50px',
-              }} bgcolor='#E9ECFF'>
-                <Grid container > 
-                  <Grid item sm={4} xs={4} >
+                color:'#fff'
+              }} bgcolor={Color.paletteBluedark}>
+                <Grid container> 
+                <Grid item sm={3} xs={3}>
+
+                </Grid>
+                  <Grid item sm={2} xs={2} >
                       <Typography variant="p" fontWeight='bolder'>
                         Recherche
                       </Typography> 
                       <br/>
-                      <FormControl sx={{  width: '25ch' }} variant="outlined">
+                      <FormControl sx={{  width: '25ch' }} variant="fulled">
                           <OutlinedInput
+                            sx={{borderColor:"white"}}
                             id="outlined-adornment-weight"
                             label={false}
                             size='small'
                             endAdornment={
                               <InputAdornment position="end">
-                                <IconButton type="submit" sx={{ p: '10px' }} aria-label="search">
+                                <IconButton type="submit" sx={{ p: '10px',color:'#fff' }} aria-label="search">
                                   <SearchIcon />
                                 </IconButton>
                               </InputAdornment>
@@ -79,7 +91,7 @@ const Capsule = ()=> {
                           />
                       </FormControl>
                   </Grid>
-                  <Grid item sm={4} xs={4}>
+                  <Grid item sm={2} xs={2}>
                       <Typography variant="p" fontWeight='bolder'>
                         Popularité
                       </Typography> 
@@ -99,7 +111,7 @@ const Capsule = ()=> {
                         </Select>
                       </FormControl>
                   </Grid>
-                  <Grid item sm={4} xs={4}>
+                  <Grid item sm={2} xs={2}>
                       <Typography variant="p" fontWeight='bolder'>
                         Date
                       </Typography> 
@@ -117,7 +129,11 @@ const Capsule = ()=> {
                           />
                       </FormControl>
                   </Grid>
+                  <Grid item sm={3} xs={3}>
+
                 </Grid>
+                </Grid>
+
               </Box>
               <Box padding='80px 50px 0px 50px'>
                 <Grid container spacing={3}>
@@ -129,7 +145,9 @@ const Capsule = ()=> {
                             width:'380px',
                             height:'300px',
                             borderRadius:'7px',
-                            background:'url(https://cdn.dribbble.com/users/4824889/screenshots/18241550/media/3089c4027c621e2af06e7529fb21fc2e.jpg?compress=1&resize=1200x900&vertical=top)'
+                            backgroundColor:'#f000',
+                            background:'url(/fond.svg)',
+                            backgroundSize:'cover'
                           }}>
                             ataoaoaoaoaaoao
                           </Box>
