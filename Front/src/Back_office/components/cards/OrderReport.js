@@ -3,47 +3,27 @@ import Option from "../icons/Options";
 
 const orders = [
     {
-      avatar: "avatar-1.png",
-      name: "Eren Jaegar",
-      menu: "Spicy seasoned seafood noodles",
-      total: "$125",
-      status: "completed",
+      avatar: "https://avatars.githubusercontent.com/u/80751503?s=400&u=6a0d04a90a1089e5ad180560b65371d56c0a20a8&v=4",
+      name: "RAMAMIHARIVELO",
+      menu: "Marihasina",
+      total: "120",
+      status: "0342324391",
     },
     {
-      avatar: "avatar-2.png",
-      name: "Reiner Braunn",
-      menu: "Salted Pasta with mushroom sauce",
-      total: "$145",
-      status: "preparing",
+      avatar: "https://avatars.githubusercontent.com/u/93115585?v=4",
+      name: "ROBUSTE",
+      menu: "Manohisafidy",
+      total: "145",
+      status: "0342324391",
     },
     {
-      avatar: "avatar-3.png",
-      name: "Levi Ackerman",
-      menu: "Beef dumpling in hot and sour soup",
-      total: "$105",
-      status: "pending",
+      avatar: "https://avatars.githubusercontent.com/u/82655694?v=4",
+      name: "RAKOTO",
+      menu: "Barbie",
+      total: "105",
+      status: "0342324391",
     },
-    {
-      avatar: "avatar-4.png",
-      name: "Historia Reiss",
-      menu: "Hot spicy fried rice with omelet",
-      total: "$45",
-      status: "completed",
-    },
-    {
-      avatar: "avatar-5.png",
-      name: "Armin Arlert",
-      menu: "Spicy seasoned seafood noodles",
-      total: "$125",
-      status: "completed",
-    },
-    {
-      avatar: "avatar-6.png",
-      name: "Hanji Zoe",
-      menu: "Hot spicy fried rice with omelet",
-      total: "$245",
-      status: "completed",
-    },
+    
   ];
   
 
@@ -52,19 +32,19 @@ const OrderReport = () =>{
         <Fragment>
             <div className="p-6 bg-gray-900 rounded-lg">
                 <div className="flex justify-between items-center pb-4">
-                    <h2 className="text-xl font-semibold leading-loose text-white">Order Report</h2>
+                    <h2 className="text-xl font-semibold leading-loose text-white">Nos clients</h2>
                     <button className="flex py-3 px-4 rounded-lg border border-gray-700 gap-x-2.5">
                         <Option  />
-                        <span className="text-sm text-white">Filter order</span>
+                        <span className="text-sm text-white">Filtrer l'ordre</span>
                     </button>
                 </div>
                 <table className="w-full">
                 <thead>
                     <tr className="text-sm font-semibold text-white">
-                    <td className="py-4 border-b border-gray-700">Customer</td>
-                    <td className="py-4 border-b border-gray-700">Menu</td>
-                    <td className="py-4 border-b border-gray-700 text-right">Total Payment</td>
-                    <td className="py-4 border-b border-gray-700 text-center">Status</td>
+                    <td className="py-4 border-b border-gray-700">Nom</td>
+                    <td className="py-4 border-b border-gray-700">Prenom</td>
+                    <td className="py-4 border-b border-gray-700 text-right">Presence </td>
+                    <td className="py-4 border-b border-gray-700 text-center">Tel</td>
                     </tr>
                 </thead>
                 <tbody>
@@ -72,7 +52,7 @@ const OrderReport = () =>{
                     <tr v-for="order in orders" className="text-sm text-gray-500">
                     <td className="py-4">
                         <div className="flex gap-4 items-center">
-                        <img width="32" src={order.avatar} alt="" />
+                        <img width="32" className="rounded-full" src={order.avatar} alt="" />
                         <span> { order.name } </span>
                         </div>
                     </td>

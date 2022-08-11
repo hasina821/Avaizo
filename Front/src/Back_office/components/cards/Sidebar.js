@@ -14,11 +14,7 @@ const menus = [
     { name: "graph", icon: <Graph/> },
     { name: "add", icon: <AddIcon/> },
     { name: "settings", icon: <Settings/> },
-    { name: "logout", icon: <Logout/> },
   ];
-
-  
-
 
 
 const Sidebar = ()=>{
@@ -27,8 +23,10 @@ const Sidebar = ()=>{
     return(
         <>
         <div className="flex flex-col gap-y-4 items-center py-8 w-24 bg-gray-900">
-            <button className="p-2 bg-opacity-20 rounded-xl bg-primary">
-                
+            <button className="p-2 bg-opacity-20 rounded-xl ">
+            <Link to={`/`}>
+                <img src='/crew.png' width='100px' height='50px' alt="logo"/>
+            </Link>
             </button>
             <div className="flex flex-col gap-y-4 items-end self-end">
                 {menus.map(menu=>(
