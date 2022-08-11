@@ -68,8 +68,8 @@ const Section3 = ()=> {
                                         <img src={d.src} alt={d.title} style={{width:'150px', height:'150px',borderRadius:'50%',objectFit:'cover'}}/>
                                    </Grid>
                                    <Grid item xs={8}>
-                                        <Typography variant="h2">{d.title}</Typography>
-                                        <p>{d.subtitle}</p>
+                                        <Typography variant="h5">{d.title}</Typography>
+                                        <Typography variant="p">{d.subtitle}</Typography>
                                    </Grid>
                               </Grid>
                          </Grid>)}

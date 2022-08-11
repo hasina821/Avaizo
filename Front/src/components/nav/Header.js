@@ -1,6 +1,7 @@
 import { List } from '@mui/icons-material'
 import { Box, IconButton, MenuList } from '@mui/material'
-import React,{useEffect, useState} from 'react'
+import gsap, { Power3 } from 'gsap'
+import React,{useEffect, useRef, useState} from 'react'
 import { Link } from 'react-router-dom'
 import NavBar from "./NavBar"
 import "./style.css"
@@ -46,17 +47,39 @@ const Header = () => {
             setDisabled(false)
         },1200)
     }
+
+    //Gsap 
+    let tl = new gsap.timeline();
+    let ease = Power3.easeOut();
+    let logo = useRef(null)
+    let menu = useRef(null)
+
+    useEffect(()=>{
+        tl.from(logo,1,{
+            opacity:0,
+            y:100
+        })
+        tl.from(menu,2,{
+            opacity:0,
+            y:-200,
+            stagger:{
+                amount:.4
+            },
+            ease:ease
+        })
+    })
+
   return (
     <div className='header'>
         <div className='container'>
             <div className='wrapper'>
                 <div className='inner-header'>
-                    <div className='logo'>
+                    <div className='logo' ref={el => logo=el}>
                         <Link to="login">
-                            <img src="/crew.png" alt="logo" style={{width:'50px',height:'50px',objectFit:'cover'}}/>
+                            <img src="/crew.png" alt="logo" style={{width:'90px',height:'70px',objectFit:'cover'}}/>
                         </Link>
                     </div>
-                    <div className='menu'>
+                    <div className='menu' ref={el => menu = el}>
                         <IconButton disabled={disabled} onClick={handleMenu}><List/></IconButton>
                     </div>
                 </div>

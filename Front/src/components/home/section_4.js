@@ -98,7 +98,7 @@ const Section4= ()=>{
                                 <Avatar
                                     alt={op.auteur}
                                     src={op.pdp}
-                                    sx={{ width: 56, height: 56 }}
+                                    sx={{ width: 56, height: 56,objectFit:'cover' }}
                                     />
                                 <Typography variant='h6' sx={{fontWeight:'bold'}}>
                                     {op.auteur}

@@ -24,6 +24,7 @@
 /* Header */
 .header{
     height: 10vh;
+    padding: 10px 50px;
     background-color: #010C1E;
 }
 
@@ -35,10 +36,9 @@
     align-items: center;
 }
 
-.header .inner-header .logo a {
-    font-weight: 700;
-    text-decoration: none;
-    color: #191919;
+.header .inner-header .logo {
+    display: flex;
+    align-items: center;
 }
 
 .header .inner-header .menu button{

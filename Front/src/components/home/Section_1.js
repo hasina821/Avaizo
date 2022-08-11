@@ -1,8 +1,9 @@
-import React, { useEffect } from "react"
+import React, { useEffect, useRef } from "react"
 import { makeStyles } from '@mui/styles';
 import { Grid,  Typography, Box, Button} from '@mui/material';
 import { Link } from "react-router-dom"
 import Color from "../../Back_office/components/palette/color";
+import gsap, { Power3 } from "gsap";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -51,32 +52,47 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Section1 = () => {
+     
      const classes = useStyles();
-     useEffect(() => {
-     })
+     let tl = new gsap.timeline();
+    let ease = Power3.easeOut();
+    let h2 = useRef(null)
+    let h6 = useRef(null)
+    let btn = useRef(null)
+    let image = useRef(null)
+
+    useEffect(()=>{
+        tl.from([h2,h6,btn],2,{
+            opacity:0,
+            y:200,
+            skewY: 10,
+            stagger:{
+                amount:.4
+            }
+        },"-=1")
+        tl.from(image, 2 , {
+          scale:0.6,
+          ease:ease
+        },"-=1.2")
+    })
      return (
           <Box sx={{}} className={classes.root}>
                <Box className={classes.vertical}></Box>
                <Grid container sx={{height:'100%',position:'relative'}}>
-                    <Box sx={{position:'absolute',top:'50px',left:'50px'}}>
-                         <Link to={`/admin/home`}>
-                              <Typography className="text-yellow-500" variant="p">Admin</Typography>
-                         </Link>
-                    </Box>
                     <Grid item sm={7} xs={7} className={classes.banner}>
                         <Box>
-                              <Typography variant="h2" color='#fff' fontWeight='bolder'>
+                              <Typography variant="h2" ref={el => h2 = el} color='#fff' fontWeight='bolder'>
                                    Un site web pour la reservation en ligne au cinema
                               </Typography>
-                              <Typography variant="h6" color='#fff'>
+                              <Typography variant="h6" ref={el => h6 = el} color='#fff'>
                                    Lorem ipsum dolor sit amet consectetur adipiscing elit.
                                    Consectetur tortor nunc aliquam consectetur semper augue at.
                               </Typography>
-                              <Button variant="contained" className={classes.btnStart}>Commencer</Button>
+                              <Button ref={el => btn = el} variant="contained" className={classes.btnStart}>Commencer</Button>
                         </Box>
                     </Grid>
                     <Grid item xs={5} className={classes.imageSection}>
-                         <img src="/fond.svg" alt="" style={{objectFit:"cover"}}/>
+                         <img ref={el => image = el} src="/fond.svg" alt="" style={{objectFit:"cover"}}/>
                     </Grid>
                </Grid>
           </Box>
