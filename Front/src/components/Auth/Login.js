@@ -5,6 +5,7 @@ import VisibilityOff from "@mui/icons-material/VisibilityOff"
 // import AlternateEmailTwoToneIcon from "@mui/icons-material/AlternateEmailTwoToneIcon"
 import { Link } from "react-router-dom";
 import { StyleAuth } from "./Styles";
+import axios from "axios";
 
 
 const Login = () => {
@@ -16,6 +17,18 @@ const Login = () => {
     const handleClickShowPassword = () => { setValues({ ...values, showPassword: !values.showPassword }) }
     const handleMouseDownPassword = (e) => { e.preventDefault() }
     const changeRecaptcha = (value) => console.log(value)
+
+    const submitEvent = () => {
+        axios.post('https://tick-res-2022.herokuapp.com/login', {
+            email: "johnDoe@gmail.com",
+            password: "password"
+        }, {
+            headers: {
+                "Access-Control-Allow-Origin": "*"
+            }
+        }).then((res) => console.log("Connect ...")).catch(() => console.log('error'))
+    }
+
     useEffect(() => {
         console.log(values.email, values.password)
     }, [values.email, values.password])
@@ -50,10 +63,10 @@ const Login = () => {
 
             <FormControlLabel sx={{ color: "gray", fontSize: '12px' }} control={<Switch size="small" />} label="Se souviens de moi ? " />
             <Stack sx={{ width: "100%", margin: "10px 0" }} direction="row" spacing={2}>
-                <Button className={styles.buttonConnexion} variant="contained">Connecter</Button>
+                <Button className={styles.buttonConnexion} variant="contained" onClick={submitEvent}>Connecter</Button>
                 <Button className={styles.buttonCancel} variant="contained">Annuler</Button>
             </Stack>
-            
+
             <Typography color="gray" fontSize="14px" textAlign="center">
                 Vous n'avez pas encore un compte? &nbsp;
                 <Link to="/auth/register" style={{ textDecoration: 'underline', color: 'blue' }}>s'inscrire</Link>

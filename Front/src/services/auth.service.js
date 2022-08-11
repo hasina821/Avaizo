@@ -19,11 +19,12 @@ const login = (email, password) => {
       password,
     })
     .then((response) => {
-      if (response.data.accessToken) {
-        alert(response)
-        localStorage.setItem("user", JSON.stringify(response.data));
-      }
-      return response.data;
+      // if (response.data.accessToken) {
+      //   alert(response)
+      //   localStorage.setItem("user", JSON.stringify(response.data));
+      // }
+      // return response.data;
+      console.log(response)
     }).catch((error) => {
       console.log(error)
       alert("AAA")
