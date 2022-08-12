@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="container">
         <div className="row">
           <div className="footer-col">
-            <h4>company</h4>
+            <h4 data-scroll data-scroll-delay="0.04" data-scroll-speed="2">company</h4>
             <ul>
               <li><a href="https://">about us</a></li>
               <li><a href="https://">our services</a></li>

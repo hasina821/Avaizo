@@ -1,0 +1,48 @@
+$blueDark: #010C1E;
+$teal2: #114246;
+$teal3: #03202B;
+
+.section2 {
+    background-color: $blueDark;
+    padding: 50px 20px 50px 40px;
+
+    .title {
+        padding: 0px 15%;
+        text-align: center;
+
+        h1 {
+            color: #fff;
+            font-weight: 600;
+            font-size: 100px;
+            white-space: nowrap;
+            text-transform: uppercase;
+            line-height: 1;
+        }
+        span{
+            display: block;
+        }
+    }
+
+    .listItem {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        padding: 50px;
+        flex-wrap: nowrap;
+        column-gap: 10px;
+
+        .boxItem {
+            background-color: $teal3;
+            box-shadow: 2px 2px 3px $teal2;
+            border-radius: 3px;
+            padding: 10px;
+
+            h5{
+                color:#fff;
+                font-weight: 500;
+            }
+            p{
+                color: #fff;
+            }
+        }
+    }
+}

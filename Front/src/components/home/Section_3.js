@@ -52,15 +52,15 @@ const Section3 = ()=> {
      }
  ] 
      return(
-               <Box className={classes.root}>
+               <Box className={classes.root} id="fixed">
                     <Box className={classes.titles}>
                          <Divider  style={{backgroundColor:Color.paleteTealRadiant,width:'200px',height:'3px'}}/>
-                         <Typography variant="h1"  className={classes.title}>
-                              NOS SERVICES
-                         </Typography>
+                              <Typography  variant="h1"  className={classes.title}>
+                                   NOS SERVICES
+                              </Typography>
                          <Divider  style={{backgroundColor:Color.paleteTealRadiant,width:'200px',height:'3px'}}/>
                     </Box>
-                    <Grid container flexWrap="wrap" sx={{padding:'40px',color:'white'}}>
+                    <Grid container flexWrap="wrap" sx={{padding:'40px',color:'white'}} data-scroll data-scroll-sticky data-scroll-target="#fixed">
                          {data.map(d => 
                          <Grid item xs={6} className={classes.serviceItem} justifyContent="center" alignItems="center">
                               <Grid container >

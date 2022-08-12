@@ -2,11 +2,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import i18n from 'i18next';
-import AppRouter from "./router/index"
 import {useTranslation,initReactI18next} from "react-i18next"
 import LanguageDetector from 'i18next-browser-languagedetector';
 import HttpApi from "i18next-http-backend"
 import "./index.css"
+import App from './App';
 
 
 i18n
@@ -30,7 +30,7 @@ i18n
 
 ReactDOM.render(
   <React.StrictMode>
-      <AppRouter />
+      <App/>
   </React.StrictMode>,
   document.getElementById('app')
 );
