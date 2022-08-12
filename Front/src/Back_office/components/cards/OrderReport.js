@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
 import Option from "../icons/Options";
+import Color from "../palette/color";
 
 const orders = [
     {
@@ -39,7 +40,7 @@ const OrderReport = () =>{
                     </button>
                 </div>
                 <table className="w-full">
-                <thead>
+                <thead style={{backgroundColor:Color.paletteTeal1}}>
                     <tr className="text-sm font-semibold text-white">
                     <td className="py-4 border-b border-gray-700">Nom</td>
                     <td className="py-4 border-b border-gray-700">Prenom</td>

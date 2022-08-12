@@ -8,43 +8,43 @@ const colors = scaleOrdinal(schemeCategory10).range();
 
 const data = [
   {
-    name: 'Page A',
+    name: 'Erotique',
     uv: 4000,
     female: 2400,
     male: 2400,
   },
   {
-    name: 'Page B',
+    name: 'Action',
     uv: 3000,
     female: 1398,
     male: 2210,
   },
   {
-    name: 'Page C',
+    name: 'Fantastique',
     uv: 2000,
     female: 9800,
     male: 2290,
   },
   {
-    name: 'Page D',
+    name: 'Romantique',
     uv: 2780,
     female: 3908,
     male: 2000,
   },
   {
-    name: 'Page E',
+    name: 'Aventure',
     uv: 1890,
     female: 4800,
     male: 2181,
   },
   {
-    name: 'Page F',
+    name: 'Science finction',
     uv: 2390,
     female: 3800,
     male: 2500,
   },
   {
-    name: 'Page G',
+    name: 'Policier',
     uv: 3490,
     female: 4300,
     male: 2100,

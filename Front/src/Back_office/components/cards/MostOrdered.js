@@ -25,10 +25,13 @@ const MostOrdered = ()=>{
             <div className="flex flex-col p-6 bg-gray-900 rounded-lg gap-y-6">
                 <div className="flex justify-between items-center">
                     <h2 className="text-xl font-semibold leading-loose text-white">Le film le plus commadé</h2>
-                    <button className="flex gap-x-2.5 py-3 px-4 rounded-lg border border-gray-700">
-                        <Chevron/>
-                        <span className="text-sm text-white">Aujourd'hui</span>
-                    </button>
+                    <form>
+                        <select className="flex gap-x-2.5 py-3 px-4 rounded-lg border text-white bg-gray-900 border-gray-700">
+                            <option className="text-sm text-white">Ajourd'hui</option>
+                            <option className="text-sm text-white">Hier</option>
+                            <option className="text-sm text-white">La semaine derniere</option>
+                        </select>
+                    </form>
                 </div>
                 <hr className="border-gray-700" />
                 <div className="flex flex-col gap-y-4">
