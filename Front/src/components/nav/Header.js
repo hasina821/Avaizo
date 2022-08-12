@@ -1,3 +1,5 @@
+import { faBars } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { List } from '@mui/icons-material'
 import { Box, IconButton, MenuList } from '@mui/material'
 import gsap, { Power3 } from 'gsap'
@@ -5,7 +7,6 @@ import React,{useEffect, useRef, useState} from 'react'
 import { Link } from 'react-router-dom'
 import NavBar from "./NavBar"
 import "./style.css"
-
 
 const Header = () => {
     const [state,setState] = useState({
@@ -80,14 +81,21 @@ const Header = () => {
                         </Link>
                     </div>
                     <div className='menu' ref={el => menu = el}>
-                        <IconButton disabled={disabled} onClick={handleMenu}><List/></IconButton>
+                        <Link to="login">
+                            Se connecter
+                        </Link>
+                        <Link to="register">
+                            S'enregistrer
+                        </Link>
+                        <FontAwesomeIcon disabled={disabled} onClick={handleMenu} icon={faBars}/>
                     </div>
                 </div>
             </div>
         </div>
         <NavBar state={state}/>
-    </div>
+    </div> 
   )
 }
 
 export default Header
+

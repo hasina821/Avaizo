@@ -11,7 +11,7 @@ import PageNotFound404 from "../pages/Error/PageNotFound404"
 
 const AppRouter=()=>{
      const isConnected = true
-     const isAdmin = false
+     const isAdmin = true
      return(
           <BrowserRouter>
                     <Routes>

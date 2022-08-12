@@ -174,3 +174,21 @@
     padding: 8px 24px;
     border-radius: 4px;
 }
+
+/*Perso*/
+/*ABout menu*/
+.menu{
+    display: flex;
+    column-gap: 15px;
+    align-items: center;
+    color: #fff;
+}
+.menu a {
+    font-size: 14px;
+}
+.menu svg {
+    font-size:25px;
+}
+.menu svg:hover{
+    cursor: pointer;
+}
