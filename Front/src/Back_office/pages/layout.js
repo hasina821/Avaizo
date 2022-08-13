@@ -5,7 +5,8 @@ import Home from "./Home"
 import Add from "./Ajouter"
 import Graph from "./Graph"
 import Settings from "./Settings"
-import {Link} from "react-router-dom"
+import Addreseau from "../components/cards/Addreseaux"
+
 
 const AdminLayout = () =>{
     return(
@@ -15,6 +16,7 @@ const AdminLayout = () =>{
                 <Routes>
                     <Route path='/home' element={<Home/>}/>
                     <Route path='/add' element={<Add/>}/>
+                    <Route path='/addreseau' element={<Addreseau/>}/>
                     <Route path='/graph' element={<Graph/>}/>
                     <Route path='/Settings' element={<Settings/>}/>
                 </Routes>

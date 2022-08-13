@@ -1,8 +1,8 @@
 import React from "react"
 import StatsCard from "../components/cards/StatsCard";
-import OrderReport from "../components/cards/OrderReport";
-import MostOrdered from "../components/cards/MostOrdered";
-import MostTypeof from "../components/cards/MostTypeofOrder";
+import CardEtudiant from "../components/cards/CardEtudiant";
+import MostOrdered from "../components/cards/Top3deconsomation";
+import MostTypeof from "../components/cards/StatEtudiant";
 import {Link} from "react-router-dom"
 
 const Home = ()=>{
@@ -16,7 +16,7 @@ const Home = ()=>{
                     </header>
                     <hr class="border-gray-700" />
                     <StatsCard />
-                    <OrderReport />
+                    <CardEtudiant />
                 </main>
                 <aside class="flex flex-col gap-y-6 pt-6 pr-6 w-96">
                     <MostOrdered />

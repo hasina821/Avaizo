@@ -8,23 +8,27 @@ import Register from "../components/Auth/Register"
 import PrivateRoute from "../components/PrivateRoute/PrivateRoute"
 import NoAccessPage from "../pages/Error/NoAccessPage"
 import PageNotFound404 from "../pages/Error/PageNotFound404"
+import { EtudiantContextProvider } from "../utils/context/EtudiantContext"
+
 
 const AppRouter=()=>{
      const isConnected = true
      const isAdmin = true
      return(
-          <BrowserRouter>
-                    <Routes>
-                         <Route element={<PrivateRoute redirectPath="/inaccessible" authorization={isConnected && isAdmin}/>}>
-                              <Route path='admin/*' element={<AdminLayout/>} />
-                         </Route>
-                         <Route path='login' element={<AuthLayout><Login/></AuthLayout>}/>
-                         <Route path="register" element={<AuthLayout><Register/></AuthLayout>}/>
-                         <Route path="/inaccessible" element={<NoAccessPage/>}/>
-                         <Route path="/notFound" element={<PageNotFound404/>}/>
-                         <Route path='/*' element={<UserLayout/>} />
-                    </Routes>
-          </BrowserRouter>
+          <EtudiantContextProvider>
+               <BrowserRouter>
+                         <Routes>
+                              <Route element={<PrivateRoute redirectPath="/inaccessible" authorization={isConnected && isAdmin}/>}>
+                                   <Route path='admin/*' element={<AdminLayout/>} />
+                              </Route>
+                              <Route path='login' element={<AuthLayout><Login/></AuthLayout>}/>
+                              <Route path="register" element={<AuthLayout><Register/></AuthLayout>}/>
+                              <Route path="/inaccessible" element={<NoAccessPage/>}/>
+                              <Route path="/notFound" element={<PageNotFound404/>}/>
+                              <Route path='/*' element={<UserLayout/>} />
+                         </Routes>
+               </BrowserRouter>
+          </EtudiantContextProvider>
      )
 }
 

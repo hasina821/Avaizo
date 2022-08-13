@@ -1,7 +1,7 @@
 import React from "react";
 import Color from "../palette/color";
 
-export default function CardAdd() {
+export default function Addreseau() {
   return (
     <>
       <div className="container mx-auto px-4 h-full text-white">
@@ -11,7 +11,7 @@ export default function CardAdd() {
               <div className="rounded-t mb-0 px-6 py-6">
                 <div className="text-center mb-3">
                   <h6 className="text-blueGray-500 text-sm font-bold">
-                    Ajouter un étudiant
+                    Ajouter un point d'acces
                   </h6>
                 </div>
                 <div className="btn-wrapper text-center">
@@ -28,12 +28,12 @@ export default function CardAdd() {
                       className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
                       htmlFor="grid-password"
                     >
-                      Nom
+                      Nom du sous reseaux
                     </label>
                     <input
                       type="email"
                       className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150 text-black"
-                      placeholder="Nom"
+                      placeholder="Nom de votre point d'acces"
                     />
                   </div>
 
@@ -42,12 +42,12 @@ export default function CardAdd() {
                       className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
                       htmlFor="grid-password"
                     >
-                      Prenom
+                      Volume total
                     </label>
                     <input
                       type="text"
                       className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150 text-black"
-                      placeholder="Prenom"
+                      placeholder="Volume total"
                     />
                   </div>
 
@@ -56,53 +56,13 @@ export default function CardAdd() {
                       className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
                       htmlFor="grid-password"
                     >
-                      Matricule
+                      adresse
                     </label>
                     <input
-                      type="text"
+                      type="Text"
                       className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150 text-black"
-                      placeholder="Matricule"
+                      placeholder="Categorie"
                     />
-                  </div>
-                  <div className="relative w-full mb-3">
-                    <label
-                      className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
-                      htmlFor="grid-password"
-                    >
-                      Niveau
-                    </label>
-                    <select className = "border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150 text-black">
-                      <option>L1</option>
-                      <option>L2</option>
-                      <option>L3</option>
-                      <option>M1</option>
-                      <option>M2</option>
-                    </select>
-                  </div>
-                  <div className="relative w-full mb-3">
-                    <label
-                      className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
-                      htmlFor="grid-password"
-                    >
-                      Rôle
-                    </label>
-                    <select className = "border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150 text-black">
-                      <option>Utulisateur</option>
-                      <option>Admin</option>
-                    </select>
-                  </div>
-                  <div className="relative w-full mb-3">
-                    <label
-                      className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
-                      htmlFor="grid-password"
-                    >
-                      Parcours
-                    </label>
-                    <select className = "border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150 text-black">
-                      <option>GB</option>
-                      <option>SR</option>
-                      <option>IG</option>
-                    </select>
                   </div>
                   <div>
                     <label className="inline-flex items-center cursor-pointer">

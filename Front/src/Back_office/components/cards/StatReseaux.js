@@ -7,38 +7,56 @@ import Globe from "../icons/Globe";
 
 const stats = [
     {
-      title: "Total inscrits",
-      percentage: "+0.240%",
-      value: "100%",
+      percentage: "21%",
+      value: "Sous reseau 1",
       status: "up",
       icon: <Coin/>,
     },
     {
-      title: "Total connectés actuellement",
-      percentage: "74.40%",
-      value: "1564",
+        percentage: "8%",
+        value: "Sous reseau 2",
+        status: "up",
+        icon: <Coin/>,
+    },
+    {
+      percentage: "8%",
+      value: "Sous reseau 3",
       status: "down",
       icon: <Globe/>,
     },
     {
-      title: "Total non connectés actuellement",
-      percentage: "25.60%",
-      value: "436",
+      percentage: "31%",
+      value: "Sous reseau 4",
       status: "up",
       icon: <Customer/>,
     },
+    {
+        percentage: "2%",
+        value: "Sous reseau 5",
+        status: "up",
+        icon: <Customer/>,
+      },
+      {
+        percentage: "15%",
+        value: "Sous reseau 6",
+        status: "up",
+        icon: <Customer/>,
+      },
+      {
+        percentage: "15%",
+        value: "Sous reseau 7",
+        status: "up",
+        icon: <Customer/>,
+      },
   ];
 
-const StatsCard = () =>{
+const StatReseaux = () =>{
     return(
         <>
             <div className="flex gap-6">
                 {stats.map((stat)=>(
                     <div className="flex flex-col p-4 w-1/3 bg-gray-900 rounded-lg gap-y-3">
                         <div className="flex items-center gap-x-3">
-                            <div className="p-2 bg-gray-800 rounded-lg">
-                                {stat.icon}
-                            </div>
                             <span
                             className="text-xs font-medium text-white"
                             >
@@ -51,7 +69,6 @@ const StatsCard = () =>{
                             </div>
                         </div>
                         <div className="text-3xl font-semibold text-white">{ stat.value }</div>
-                        <div className="text-sm tracking-wide text-gray-500">{ stat.title }</div>
                     </div>
                 ))}
             </div>
@@ -59,4 +76,4 @@ const StatsCard = () =>{
     )
 }
 
-export default StatsCard;
+export default StatReseaux;

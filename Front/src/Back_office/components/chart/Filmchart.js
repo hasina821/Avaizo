@@ -8,13 +8,13 @@ export default function Filmchart() {
       type: "line",
       data: {
         labels: [
-          "January",
-          "February",
-          "March",
-          "April",
-          "May",
-          "June",
-          "July",
+          "Lundi",
+          "Mardi",
+          "Mercredi",
+          "Jeudi ",
+          "Vendredi",
+          "Samedi",
+          "Dimanche",
         ],
         datasets: [
           {
@@ -23,13 +23,6 @@ export default function Filmchart() {
             borderColor: Color.paletteTeal1,
             data: [65, 78, 66, 44, 56, 67, 75],
             fill: false,
-          },
-          {
-            label: new Date().getFullYear() - 1,
-            fill: false,
-            backgroundColor: "#fff",
-            borderColor: "#fff",
-            data: [40, 68, 86, 74, 56, 60, 87],
           },
         ],
       },
@@ -116,7 +109,7 @@ export default function Filmchart() {
               <h6 className="uppercase text-white mb-1 text-xs font-semibold">
                 Statistique
               </h6>
-              <h2 className="text-white text-xl font-semibold">Films</h2>
+              <h2 className="text-white text-xl font-semibold">Data en Mo</h2>
             </div>
           </div>
         </div>
