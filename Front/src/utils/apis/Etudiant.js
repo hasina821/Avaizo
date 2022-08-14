@@ -8,5 +8,4 @@ const EtudiantAxios=Axios.create({
 
 export{
     EtudiantAxios
-    
 }

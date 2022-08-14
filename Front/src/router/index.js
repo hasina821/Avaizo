@@ -13,7 +13,7 @@ const AppRouter = () => {
           <EtudiantContextProvider>
                <BrowserRouter>
                     <Routes>
-                         <Route element={<PrivateRoute redirectPath="/inaccessible" authorization={isConnected && isAdmin} />}>
+                         <Route element={<PrivateRoute redirectPath="/" authorization={isConnected && isAdmin} />}>
                               <Route path='admin/*' element={<AdminLayout />} />
                          </Route>
                          <Route path='/*' element={<UserLayout />} />

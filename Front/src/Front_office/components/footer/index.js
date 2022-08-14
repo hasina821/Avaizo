@@ -1,9 +1,29 @@
 import { faFacebook, faInstagram, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { yupResolver } from '@hookform/resolvers/yup'
+import { InputAdornment, TextField } from '@mui/material'
 import React from 'react'
-import "./footer.css"
+import { useForm } from 'react-hook-form'
+import * as Yup from "yup"
+import "./footer.scss"
+
 
 const Footer = () => {
+
+  const validation = Yup.object().shape({
+    feedback: Yup.string()
+        .test('len','Votre feedback ne doit pas depasser 255 caractères',val => val.length >=255)
+        .required("Le champ est obligatoire"),
+})
+
+const { login, handleSubmit, formState: { errors } } = useForm({
+    resolver: yupResolver(validation)
+})
+
+const handleAddSubmit = async(data) => {
+    console.log(data)
+}
+
   return (
     <footer className="footer">
       <div className="container">
@@ -39,10 +59,24 @@ const Footer = () => {
           <div className="footer-col">
             <h4>Folow us</h4>
             <div className='social-links'>
-              <a href="h"><FontAwesomeIcon icon={faFacebook}/></a>
-              <a href="h"><FontAwesomeIcon icon={faInstagram}/></a>
-              <a href="h"><FontAwesomeIcon icon={faTwitter}/></a>
-              <a href="h"><FontAwesomeIcon icon={faLinkedin}/></a>
+              <a href="h"><FontAwesomeIcon icon={faFacebook} /></a>
+              <a href="h"><FontAwesomeIcon icon={faInstagram} /></a>
+              <a href="h"><FontAwesomeIcon icon={faTwitter} /></a>
+              <a href="h"><FontAwesomeIcon icon={faLinkedin} /></a>
+            </div>
+            <div>
+              <form onClick={handleSubmit(handleAddSubmit)}>
+                <TextField variant="outlined" size="small" name="feedback" label="FeedBack" type="text"
+                  InputProps={{
+                    endAdornment: (<InputAdornment position="end">
+                    </InputAdornment>
+                    )
+                  }}
+                  inputRef={login}
+                />
+                <p className="error">{errors.feedback?.message}</p>
+                <button type="submit">Envoyer</button>
+              </form>
             </div>
           </div>
         </div>

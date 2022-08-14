@@ -1,6 +1,6 @@
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useLocation, useNavigate, useParams, Link } from "react-router-dom";
 import NavBar from "./NavBar";
 import "./style.scss"
@@ -64,11 +64,14 @@ const Header = () => {
     <header>
       <div className="menu">
         <Link to="/"><img src="/crew.png" alt="logo" /></Link>
-        <button disabled={disabled} onClick={handleMenu}>
-          {state.menuName}
-        </button>
+        <div className="right">
+          <Link to="/login">Se connecter</Link>
+          <Link to="/register">S'inscrire</Link>
+          <button disabled={disabled} onClick={handleMenu}>
+            {state.menuName}
+          </button>
+        </div>
       </div>
-
       <NavBar state={state} setState={setState}/>
     </header>
   );
