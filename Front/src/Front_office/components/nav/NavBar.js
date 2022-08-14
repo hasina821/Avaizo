@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { Link } from "react-router-dom";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import {
@@ -14,7 +14,7 @@ import {
 } from "./Animations";
 import { useLocomotiveScroll } from "react-locomotive-scroll";
 
-const NavBar = ({ state,setState }) => {
+const NavBar = ({ state, setState }) => {
   // Create varibles of our dom nodes
   let menuLayer = useRef(null);
   let reveal1 = useRef(null);
@@ -24,15 +24,15 @@ const NavBar = ({ state,setState }) => {
   let line3 = useRef(null);
   let info = useRef(null);
 
-  const {scroll} = useLocomotiveScroll()
+  const { scroll } = useLocomotiveScroll()
 
   const handleScroll = (id) => {
     menuLayer.style.display = 'none'
     let element = document.querySelector(id)
-    scroll.scrollTo(element,{
+    scroll.scrollTo(element, {
       offset: '-100',
       duration: '2000',
-      easing: [0.25,0.0,0.35,1.0]
+      easing: [0.25, 0.0, 0.35, 1.0]
     })
     setState({
       initial: false,
@@ -65,12 +65,22 @@ const NavBar = ({ state,setState }) => {
     }
   }, [state]);
 
+  const handleMenu = () => {
+    setState({
+      clicked: !state.clicked,
+      menuName: <FontAwesomeIcon icon={faBars} />
+    });
+  }
+
   return (
     <div ref={el => (menuLayer = el)} className='menu-logo'>
       <div
         ref={el => (reveal1 = el)}
         className='menu-secondary-background-color'></div>
       <div ref={el => (reveal2 = el)} className='menu-layer'>
+        <button onClick={handleMenu} className="close-btn">
+          <FontAwesomeIcon icon={faXmark} />
+        </button>
         <div className='container'>
           <div className='wrapper'>
             <div className='menu-links'>
@@ -100,10 +110,10 @@ const NavBar = ({ state,setState }) => {
                       onMouseOut={e => handleHoverExit(e)}
                       ref={el => (line3 = el)}
                       onClick={() => handleScroll("")}>
-                      
+
                     </button>
                   </li>
-                  
+
                 </ul>
               </nav>
               <div ref={el => (info = el)} className='info'>

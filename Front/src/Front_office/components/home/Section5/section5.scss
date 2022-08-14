@@ -10,6 +10,13 @@
         grid-template-columns: 40% 60%;
         flex-wrap: nowrap;
 
+        @media (max-width:1090px){
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            border: 1px solid green;
+        }
+
         .box-image {
             position: relative;
 
@@ -18,6 +25,12 @@
                 width: 80%;
                 object-fit: cover;
                 border-radius: 30px;
+            }
+        }
+
+        @media (max-width:1090px){
+            .image{
+                display: none;
             }
         }
 
@@ -48,10 +61,16 @@
         }
 
         .qlq-chiffres{
+            width: 100%;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            border:1px solid red;
+
+            @media(max-width:1090px){
+                display: block;
+            }
 
             .title{
                 text-align: center;
@@ -63,11 +82,11 @@
                     &:before,&:after{
                         content: '';
                         width: 100px;
-                        height: 2px;
+                        height: 5px;
                         position: absolute;
                         top: 50%;
                         transform: translateY(-50%);
-                        background-color: $orange;
+                        background-color: $grey;
                     }
                     &:before{right: 100%;}
                     &:after{left:100%}
@@ -82,6 +101,12 @@
                 column-gap: 20px;
                 row-gap: 50px;
                 margin-top: 30px;
+
+                @media (max-width:1150px){
+                    row-gap: 20px;
+                    margin-top: 10px;
+                }
+
                 .chiffre{
                     display: flex;
                     flex-direction: column;

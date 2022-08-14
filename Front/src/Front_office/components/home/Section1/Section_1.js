@@ -40,17 +40,22 @@ const Section1 = () => {
                          <div className="content-left">
                               <div>
                                    <div className="block-span" ref={el => h2 = el}>
-                                        <span data-scroll data-scroll-delay="0.13" data-scroll-speed="4">Acces wifi</span>
-                                        <span data-scroll data-scroll-delay="0.09" data-scroll-speed="4">&nbsp;de l'Etudiant</span>
+                                        <span data-scroll data-scroll-delay="0.13" data-scroll-speed="4">Mettons en</span>
+                                        <span data-scroll data-scroll-delay="0.11" data-scroll-speed="4">&nbsp;place un</span>
+                                        <span data-scroll data-scroll-delay="0.09" data-scroll-speed="4">&nbsp;point d'</span>
+                                        <span data-scroll data-scroll-delay="0.07" data-scroll-speed="4">&nbsp;d'accès wifi</span>
+                                        <span data-scroll data-scroll-delay="0.05" data-scroll-speed="4">&nbsp;fiable et</span>
+                                        <span data-scroll data-scroll-delay="0.03" data-scroll-speed="4">&nbsp;équilibré</span>
                                    </div>
                                    <h6 ref={el => h6 = el}>
-                                        Site pour la gérance de l'accès wifi de tous les etudiants de l'Ecole
-                                        Nationale de l'Informatique
+                                        Un plateforme pour la gérance d'accès internet à tous
                                    </h6>
                                    <button ref={el => btn = el}>Commencer</button>
                               </div>
                          </div>
-                         <div className="content-right" ref={image}></div>
+                         <div className="img">
+                              <div className="content-right" ref={image}></div>
+                         </div>
                     </div>
                </div>
           </>

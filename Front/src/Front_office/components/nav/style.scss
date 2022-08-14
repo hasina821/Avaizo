@@ -1,7 +1,7 @@
 @import "./../../Assets/color";
 
 header {
-  height: 12vh;
+  height: 110px;
   background-color: $bluedark;
   overflow: hidden;
   padding: 0 50px;
@@ -10,11 +10,10 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5px 0;
 
     img {
-      width: 70px;
-      height: 70px;
+      width: 150px;
+      height: 150px;
       object-fit: cover;
     }
 
@@ -168,5 +167,15 @@ header {
 
   a{
     color: $grey;
+  }
+}
+
+.close-btn{
+  position: absolute;
+  right: 50px;
+  top: 10px;
+  svg{
+    font-size: 40px;
+    color: #fff;
   }
 }

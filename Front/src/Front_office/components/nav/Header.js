@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
 import { useLocation, useNavigate, useParams, Link } from "react-router-dom";
 import NavBar from "./NavBar";
+import Logo from "../../Assets/logo.png"
 import "./style.scss"
 
 
@@ -63,7 +64,7 @@ const Header = () => {
   return (
     <header>
       <div className="menu">
-        <Link to="/"><img src="/crew.png" alt="logo" /></Link>
+        <Link to="/"><img src={Logo} alt="logo" /></Link>
         <div className="right">
           <Link to="/login">Se connecter</Link>
           <Link to="/register">S'inscrire</Link>
@@ -72,7 +73,7 @@ const Header = () => {
           </button>
         </div>
       </div>
-      <NavBar state={state} setState={setState}/>
+      <NavBar state={state} setState={setState} />
     </header>
   );
 };

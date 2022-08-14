@@ -17,7 +17,7 @@ const Section5 = () => {
     return (
         <div className='section5'>
             <div className='content-section5'>
-                <div>
+                <div className="image">
                     <Slider {...settings} ref={slider}>
                         {[1, 2, 3, 4, 5].map((item) =>
                             <div key={`${item}`} className="box-image">

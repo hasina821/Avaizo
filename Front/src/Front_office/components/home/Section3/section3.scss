@@ -9,7 +9,7 @@
         color: #fff;
         font-size: 60px;
         position: relative;
-
+        
         &:before,
         &:after {
             content: '';
@@ -28,18 +28,37 @@
         &:after {
             left: 100%;
         }
+
+        @media (max-width:830px){
+            font-size: 35px;
+            &:before,&:after{
+                display: none;
+            }
+        }
     }
 
     .content-section3 {
         width: 100%;
         display: grid;
-        grid-template-columns: 49% 3% 49%;
+        grid-template-columns: 50% 50%;
         margin-top: 50px;
+        column-gap: 20px;
+
+        @media (max-width: 1000px) {
+            display: flex;
+            flex-direction: column;
+            row-gap: 20px;
+            align-items: flex-start;
+            .left > div{
+                display: flex;
+                flex-direction: row-reverse;
+            }
+        }
 
         .content {
             h3 {
                 font-size: 22px;
-                color: $grey;
+                color: rgb(169, 167, 167);
             }
         }
 
@@ -54,19 +73,8 @@
 
             svg {
                 font-size: 40px;
+                color: $bluedark;
             }
-        }
-
-        .line {
-            position: relative;
-            height: 100%;
-
-            span {
-                width: 2px;
-                height: 100%;
-                background-color: $grey;
-            }
-
         }
 
         .left {
@@ -83,7 +91,16 @@
 
             .content {
                 text-align: right;
+
+                p{
+                    color:$grey;
+                }
+                @media (max-width:1000px) {
+                    text-align: start;
+                }
             }
+
+            
         }
 
         .right {
@@ -93,9 +110,11 @@
 
             &>div {
                 display: flex;
-                justify-content: flex-start;
                 column-gap: 15px;
                 align-items: center;
+            }
+            p{
+                color:$grey;
             }
         }
     }

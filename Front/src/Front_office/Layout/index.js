@@ -16,7 +16,7 @@ const UserLayout = () => {
                     <Route element={<PrivateRoute redirectPath="/" authorization={true} />}>
                          <Route path='profile' element={<Profile/>} />
                     </Route>
-                    <Route index path='/' element={<Login />} exact={true} />
+                    <Route index path='/' element={<Home />} exact={true} />
                </Routes>
           </Fragment>
      )

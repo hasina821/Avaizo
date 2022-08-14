@@ -47,7 +47,6 @@ const Section4 = () => {
                             <div className="slide-card">
                                 <div className="slide-paragraph">{op.descri}</div>
                                 <div className="slide-avatar">
-                                    <div></div>
                                     <div className="avatar">
                                         <img alt={op.auteur} src={op.pdp}/>
                                         <p>{op.auteur}</p>

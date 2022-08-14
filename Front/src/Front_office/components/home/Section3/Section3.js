@@ -34,7 +34,6 @@ const Section3 = () => {
                         </div>
                     </div>
                 </div>
-                <div className='line'><span></span></div>
                 <div className='right'>
                     <div>
                         <div className='icon'>
