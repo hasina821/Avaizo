@@ -1,7 +1,35 @@
 import React from "react";
 import Color from "../palette/color";
+import * as Yup from "yup"
+import {useForm} from "react-hook-form"
+import { yupResolver } from "@hookform/resolvers/yup";
+
+
 
 export default function CardAdd() {
+
+    const validationSchema = Yup.object().shape({
+      nom: Yup.string("Votre nom ne doit contenir que des lettres")
+        .required('Votre nom est obligatoire'),
+      prenom: Yup.string("Votre prenom ne doit contenir que des lettres")
+        .required('Votre prenom est obligatoire'),
+      matricule: Yup.number("Votre matricule doit contenir seulement des chiffres")
+        .required('Votre matricule est osssbligatoire')
+    });
+    const {
+      register,
+      handleSubmit,
+      formState: { errors }
+    } = useForm({
+      resolver: yupResolver(validationSchema)
+    });
+
+
+    const HandleAddEtudiant = async(data) =>{
+      console.log(data);
+    }
+
+
   return (
     <>
       <div className="container mx-auto px-4 h-full text-white">
@@ -22,7 +50,7 @@ export default function CardAdd() {
               <div className="flex-auto px-4 lg:px-10 py-10 pt-0">
                 <div className="text-blueGray-400 text-center mb-3 font-bold">
                 </div>
-                <form>
+                <form onSubmit={handleSubmit(HandleAddEtudiant)}>
                   <div className="relative w-full mb-3">
                     <label
                       className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
@@ -31,12 +59,14 @@ export default function CardAdd() {
                       Nom
                     </label>
                     <input
-                      type="email"
+                      type="text"
+                      name='nom'
+                      {...register('nom')}
                       className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150 text-black"
                       placeholder="Nom"
                     />
+                    <p className="text-red-500 italic">{errors.nom?.message}</p>
                   </div>
-
                   <div className="relative w-full mb-3">
                     <label
                       className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
@@ -46,9 +76,12 @@ export default function CardAdd() {
                     </label>
                     <input
                       type="text"
+                      name='prenom'
+                      {...register('prenom')}
                       className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150 text-black"
                       placeholder="Prenom"
                     />
+                    <p className="text-red-500 italic">{errors.prenom?.message}</p>
                   </div>
 
                   <div className="relative w-full mb-3">
@@ -59,10 +92,13 @@ export default function CardAdd() {
                       Matricule
                     </label>
                     <input
-                      type="text"
+                      type="number"
+                      name='matricule'
+                      {...register('matricule')}
                       className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150 text-black"
                       placeholder="Matricule"
                     />
+                    <p className="text-red-500 italic">{errors.matricule?.message}</p>
                   </div>
                   <div className="relative w-full mb-3">
                     <label
@@ -124,13 +160,12 @@ export default function CardAdd() {
                   </div>
 
                   <div className="text-center mt-6">
-                    <button
+                    <input
                       className="text-white active:bg-blueGray-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150"
-                      type="button"
+                      type="submit"
                       style={{backgroundColor:Color.paletteTeal1}}
-                    >
-                      Ajouter
-                    </button>
+                      value='Ajouter'
+                    />
                   </div>
                 </form>
               </div>

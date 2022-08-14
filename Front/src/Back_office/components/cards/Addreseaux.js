@@ -1,7 +1,26 @@
 import React from "react";
 import Color from "../palette/color";
+import * as Yup from "yup"
+import {useForm} from "react-hook-form"
+import { yupResolver } from "@hookform/resolvers/yup";
 
 export default function Addreseau() {
+  const validationSchema = Yup.object().shape({
+    nom: Yup.string("Le nom ne doit contenir que des lettres")
+      .required('Le  nom du sous reseau  est obligatoire'),
+    volume: Yup.number("Le volume ne doit contenir que des lettres")
+      .required('Le volume du sous reseau est obligatoire'),
+    adresse: Yup.string("L'adresse ne doit contenir que des lettres")
+      .required("L'adresse est obligatoire")
+  });
+  const {
+    register,
+    handleSubmit,
+    formState: { errors }
+  } = useForm({
+    resolver: yupResolver(validationSchema)
+  });
+
   return (
     <>
       <div className="container mx-auto px-4 h-full text-white">
@@ -31,10 +50,13 @@ export default function Addreseau() {
                       Nom du sous reseaux
                     </label>
                     <input
-                      type="email"
+                      type="text"
+                      name= "nom"
+                      {...register('nom')}
                       className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150 text-black"
                       placeholder="Nom de votre point d'acces"
                     />
+                    <p className="text-red-500 italic">{errors.nom?.message}</p>
                   </div>
 
                   <div className="relative w-full mb-3">
@@ -45,10 +67,11 @@ export default function Addreseau() {
                       Volume total
                     </label>
                     <input
-                      type="text"
+                      type="number"
                       className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150 text-black"
                       placeholder="Volume total"
                     />
+                    <p className="text-red-500 italic">{errors.nom?.message}</p>
                   </div>
 
                   <div className="relative w-full mb-3">
@@ -63,6 +86,7 @@ export default function Addreseau() {
                       className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150 text-black"
                       placeholder="Categorie"
                     />
+                    <p className="text-red-500 italic">{errors.adresse?.message}</p>
                   </div>
                   <div>
                     <label className="inline-flex items-center cursor-pointer">
