@@ -8,9 +8,7 @@ import "./login.scss"
 
 const Login = () => {
     const styles = StyleAuth()
-    const [verified, setVerified] = useState(false)
     const [values, setValues] = useState({ password: "", email: "", souviens: false, showPassword: false, })
-    const handleChange = (field) => (e) => { setValues({ ...values, [field]: e.target.value }) }
     const handleClickShowPassword = () => { setValues({ ...values, showPassword: !values.showPassword }) }
     const handleMouseDownPassword = (e) => { e.preventDefault() }
     return (

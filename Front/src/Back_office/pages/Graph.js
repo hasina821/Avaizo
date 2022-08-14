@@ -3,6 +3,7 @@ import Filmchart from '../components/chart/Filmchart';
 import StatsCard from '../components/cards/StatsCard';
 import Userchart from '../components/chart/Users';
 import {Link} from "react-router-dom"
+import StatReseaux from '../components/cards/StatReseaux';
 
 const Graph = ()=>{
     return(
@@ -12,7 +13,7 @@ const Graph = ()=>{
                         
                     </header>
                     <hr class="border-gray-700" />
-                    <StatsCard />
+                    <StatReseaux />
                     <div className='grid grid-cols-2 gap-8'>
                         <div>
                             <Filmchart/>
